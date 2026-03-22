@@ -1,0 +1,184 @@
+
+**📚 Ch.12 Lesson 1 — 2025 Inflection Point & Agent Maturity Model**
+*Exam L1: P2-GAF1 Prep | 20 Questions*
+
+---
+
+**Q1.** At ICPC World Finals 2025, what was the most significant AI outcome?
+
+🅐 OpenAI solved 10/12 problems, matching gold-medal human performance
+🅑 Gemini 2.5 outperformed all 139 human teams by solving all 12 problems
+🅒 Claude Opus 4.1 achieved 49% win rate against expert programmers
+🅓 OpenAI scored perfectly (12/12), and Problem C was solved by AI but by NONE of the 139 human teams
+
+---
+
+**Q2.** The GDPval Benchmark showed Claude Opus 4.1 at 49% win rate vs humans. Why is this significant?
+
+🅐 It means AI is now better than humans at all programming tasks
+🅑 It shows AI performs well on beginner-level coding tasks
+🅒 It proves models trained after 2024 have different architecture
+🅓 18 months earlier the best AI scored below 15% — making this exponential, not incremental improvement
+
+---
+
+**Q3.** Sundar Pichai's 10% productivity gain at Google equals what?
+
+🅐 Reducing Google's annual software budget by 10%
+🅑 Allowing Google to cut engineering headcount by 10%
+🅒 Increasing code commit speed by 10% across all repositories
+🅓 Adding 8,000 full-time developers to Google's workforce overnight without hiring anyone
+
+---
+
+**Q4.** Which combination of adoption statistics from Stack Overflow 2025 + DORA 2025 is MOST accurate?
+
+🅐 74% use AI tools; 2 hrs/week usage; 80% enterprise adoption
+🅑 84% use or plan to use AI tools; 51% daily use; 90% enterprise adoption; 2 hrs/day median
+🅒 91% use AI tools; 45 min/day median; 85% enterprise adoption
+🅓 84% use or plan to use AI tools; 30% daily use; 90% enterprise adoption; 1 hr/day median
+
+---
+
+**Q5.** What does 'convergent validation' mean in the context of the 2025 inflection point?
+
+🅐 Multiple AI models converging on the same benchmark score simultaneously
+🅑 A statistical method combining results from different AI evaluation frameworks
+🅒 The process by which enterprise strategies converge after experimentation phases
+🅓 Independent sources — academia, surveys, startup economics, financial decisions — all reaching the same conclusion without coordination
+
+---
+
+**Q6.** Y Combinator W2025: 25% of startups used AI-generated code as primary approach, some with 95% AI-written codebases. What is the strategic significance?
+
+🅐 Startups are cutting corners on quality to ship faster, creating technical debt
+🅑 Only early-stage companies with no legacy systems can benefit from AI-native dev
+🅒 AI coding tools are primarily useful for non-technical founders
+🅓 Venture-backed founders are betting capital on AI-native development because it demonstrably works — this is economic validation, not opinion
+
+---
+
+**Q7.** Why does 'software disrupts itself' make the AI transition faster than agriculture or manufacturing disruptions?
+
+🅐 Software companies have more capital to invest in transitions
+🅑 Software developers are more educated and adaptable than other workers
+🅒 AI models are trained on software data giving inherent domain advantage
+🅓 Tools, workflow, and mental models all shift simultaneously — there is no 'adapt gradually' option as there was with tractors in agriculture
+
+---
+
+**Q8.** Based on historical patterns (web, mobile, cloud), where are we in the AI-native opportunity window?
+
+🅐 10-year window; we are at year 5-6, meaning the window is half-closed
+🅑 2-year window; we are at year 1, meaning only 12 months left
+🅒 15-year window; we are at year 3-4, ample time to catch up
+🅓 3-5 year window; we are at year 1-2 (2026) — early adopters still have decisive advantage
+
+---
+
+**Q9.** The Agent Maturity Model uses a biological metaphor. Which pairing is MOST accurate?
+
+🅐 Larva (General Agent) → Chrysalis (Custom Agent)
+🅑 Seed (General Agent) → Fruit (Custom Agent)
+🅒 Prototype (General Agent) → Product (Custom Agent); prototype discarded once product is built
+🅓 Incubator (General Agent) → Specialist (Custom Agent); the incubator transforms raw requirements into functional logic that crystallizes into a purpose-built specialist
+
+---
+
+**Q10.** The Director's 4 responsibilities when working with a General Agent — in correct order?
+
+🅐 Write specs → Review code → Deploy → Monitor
+🅑 Choose AI model → Set API parameters → Provide training data → Validate
+🅒 Design architecture → Write tests → Generate code → Merge PRs
+🅓 Set the intent → Provide access (the dossier) → Review the work → Course correct
+
+---
+
+**Q11.** What is 'dynamic planning' in the context of General Agents?
+
+🅐 The AI adjusts responses based on real-time user feedback during conversation
+🅑 A project management technique where timelines adjust based on git commit frequency
+🅒 The agent uses pre-built templates that adapt to different programming languages
+🅓 The agent decomposes a goal into subtasks on the fly with no prior examples or scripts — you provide a goal, the agent reasons the plan from scratch and adapts as information emerges
+
+---
+
+**Q12.** Which 2026 General Agent tool is specifically designed for NON-CODING tasks?
+
+🅐 Gemini CLI — open-source, accessible from terminal
+🅑 Goose — combines browser automation with code execution
+🅒 OpenAI Codex CLI — proposes edits as diffs, supports MCP
+🅓 Cowork — Anthropic's tool that applies Claude Code's principles to non-coding knowledge work tasks
+
+---
+
+**Q13.** What is unique about Goose's origin story among General Agent tools?
+
+🅐 Built by Google and donated to Linux Foundation as open-source AI initiative
+🅑 Built by Anthropic as alternative to Claude Code for browser-based development
+🅒 Built by OpenAI and acquired by Agentic AI Foundation for vendor-neutral governance
+🅓 Originally built by Block, now hosted by the Agentic AI Foundation (Linux Foundation); excels at browser automation and visual understanding
+
+---
+
+**Q14.** Why are Custom Agent constraints described as 'hard' rather than guidelines?
+
+🅐 Hard constraints are processed faster by LLMs improving response speed
+🅑 Hard constraints are validated by a secondary AI model before responses are sent
+🅒 Hard constraints are stored in a separate database queried before every response
+🅓 They are architectural limits engineered into the agent's design — they cannot be overridden by user input or model reasoning, unlike General Agent guidelines
+
+---
+
+**Q15.** Which dimension of the General vs Custom Agent comparison is MOST critical for production deployment?
+
+🅐 Context Model — repository-aware vs tool-aware
+🅑 Your Role — Director vs Builder
+🅒 Planning Style — Dynamic vs Pre-designed
+🅓 Reliability — General Agents are variable/creative while Custom Agents are consistent/deterministic — the non-negotiable requirement for production systems
+
+---
+
+**Q16.** A team builds a Custom Agent for invoice processing before understanding multi-currency edge cases. 6 months later it fails on those cases. Which anti-pattern?
+
+🅐 Perpetual Incubation — used General Agent too long
+🅑 Over-engineering — built too many features before validation
+🅒 Skipping Incubation — never used General Agent to explore requirements
+🅓 Premature Specialization — built Custom Agent before requirements crystallized, over-engineering a solution to an incompletely understood problem
+
+---
+
+**Q17.** An org uses Claude Code (General Agent) for 50,000 customer support queries/day in production. Which anti-pattern?
+
+🅐 Premature Specialization — should have built multiple specialized agents
+🅑 Skipping Incubation — never properly explored what the agent should do
+🅒 Over-reliance — single vendor dependency creates strategic risk at that volume
+🅓 Perpetual Incubation — using General Agent for high-volume production causes higher cost, variable outputs, and inability to enforce governance at scale
+
+---
+
+**Q18.** What is 'crystallized understanding' — the output of successful incubation?
+
+🅐 A formal spec document written in OpenAPI or JSON Schema format
+🅑 A fine-tuned model that has learned the domain from exploration iterations
+🅒 A set of unit tests capturing all requirements discovered during prototyping
+🅓 Working solution + discovered unknown requirements + proven patterns + surfaced edge cases + validated architecture decisions = the genetic material for the Custom Agent
+
+---
+
+**Q19.** Which skill does the book identify as MOST foundational for AI-native development?
+
+🅐 Prompting and collaboration — directing AI with precision
+🅑 Agent design — orchestrating systems rather than writing code
+🅒 Validation and testing — evaluating AI output as quality control
+🅓 Specification writing — because the quality of AI output is directly determined by the clarity and completeness of the specification it receives
+
+---
+
+**Q20.** What did Workday's $1.1B acquisition of Sana SPECIFICALLY signal?
+
+🅐 Enterprise companies acquire AI startups primarily for engineering talent
+🅑 The agentic AI market has reached a valuation bubble
+🅒 Established companies block competitors by acquiring promising AI startups
+🅓 Enterprises are betting billions that AI agents require ground-up platform redesign — AI agents as core product architecture, not bolt-on tools
+
