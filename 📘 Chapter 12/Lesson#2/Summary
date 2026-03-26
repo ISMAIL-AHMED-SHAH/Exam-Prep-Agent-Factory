@@ -1,0 +1,189 @@
+
+## 📘 Chapter 12 — Lesson 2 of 4
+### Three Core LLM Constraints + OODA Loop + Five Powers + AI Stack
+
+---
+
+### 🔷 1. The Three Core Operational Constraints of LLMs
+
+These three constraints shape ALL AI-native development decisions. Knowing them explains WHY agents are designed the way they are.
+
+| # | Constraint | What It Means | Design Implication |
+|---|---|---|---|
+| **1** | **Statelessness** | LLMs have no memory between sessions — every conversation starts fresh | Agents need external memory systems (databases, vector stores) to persist context |
+| **2** | **Probabilistic Outputs** | LLMs don't compute deterministic answers — they predict the most likely next token | You cannot guarantee exact outputs; validation, testing & guardrails become essential |
+| **3** | **Context Limits** | LLMs can only process a fixed window of text at once (the context window) | Long workflows must be chunked; important info must be actively managed within the window |
+
+> 🔑 These constraints are not bugs — they are fundamental properties of transformer-based LLMs. Good agent design works *around* them, not against them.
+
+---
+
+### 🔷 2. From Coder to Orchestrator — The Role Evolution
+
+The biggest mindset shift in AI-native development:
+
+| Old Role | New Role |
+|---|---|
+| **Coder / Typist** | **Orchestrator / Conductor** |
+| Writes every line of code | Specifies what the AI must build |
+| Owns all implementation details | Owns the architecture and intent |
+| Thinks in syntax | Thinks in outcomes |
+| Works alone | Conducts an AI orchestra |
+
+> "Traditional development: You write every line. Agent Factory development: You are the conductor. AI agents are your orchestra. You specify the music (requirements); they play the instruments (implementation)."
+
+#### The Three-Role Partnership (Both Human AND AI play all 3 roles):
+
+| Role | AI Does | Human Does |
+|---|---|---|
+| **Teacher** | Suggests patterns, explains tradeoffs | Guides AI through clear specs |
+| **Student** | Learns your domain, adapts to preferences | Learns new patterns from AI suggestions |
+| **Co-Worker / Orchestrator** | Handles implementation 24/7 | Designs how humans & agents collaborate |
+
+---
+
+### 🔷 3. The OODA Loop — How General Agents Reason
+
+OODA comes from military strategy (John Boyd). General agents operate in a continuous OODA loop — this is what separates them from simple chatbots:
+
+| Step | What It Means in Agent Context |
+|---|---|
+| **O — Observe** | Agent reads your problem, scans the repo/files, gathers context |
+| **O — Orient** | Agent frames the problem within constraints (your tech stack, requirements, limits) |
+| **D — Decide** | Agent chooses an approach — what to build, what tools to use |
+| **A — Act** | Agent writes code, runs commands, calls tools, produces output |
+| ↩️ **Loop** | Agent reviews its own output, detects errors, and repeats until solved |
+
+> "General Agents observe your problem, orient around constraints, decide on an approach, act by writing code or running commands, and correct their mistakes — repeating until the problem is solved."
+
+**Claude Code vs. a Coding Agent — Key Distinction:**
+
+| | Coding Agent (e.g., Cursor) | General Agent (Claude Code) |
+|---|---|---|
+| Scope | Software development only | ANY business domain |
+| Identity | Developer's pair programmer | Digital employee |
+| Built For | Developers | Anyone solving problems |
+| Example | "Implement this feature" | "Why did sales drop in Q3?" |
+
+> "Calling Claude Code a 'Coding Agent' is like calling a CEO an 'Email Writer' just because they use email."
+
+---
+
+### 🔷 4. The Five Powers of Autonomous Agents
+
+These five capabilities are what transform an LLM (a passive predictor) into an autonomous agent (an active actor). **Know these by name — exam favourite!**
+
+| Power | What It Means | Example |
+|---|---|---|
+| **1. See** | Perceive inputs — text, images, documents, data | Reading an invoice PDF, scanning a codebase |
+| **2. Hear** | Process audio/voice inputs | Voice commands, speech-to-text transcription |
+| **3. Reason** | Think through multi-step problems, plan, decide | Decomposing "reduce churn by 15%" into sub-tasks |
+| **4. Act** | Execute actions — call APIs, write files, run code, send emails | Creating a Jira ticket, querying a database |
+| **5. Remember** | Persist information across sessions via memory systems | Recalling previous client preferences, past interactions |
+
+> Without all Five Powers, an AI is just a chatbot. With all five, it becomes a Digital FTE.
+
+---
+
+### 🔷 5. The Three-Layer AI Development Stack
+
+The modern AI stack has three layers stacked from bottom to top:
+
+```
+┌─────────────────────────────────┐
+│   LAYER 3: APPLICATIONS         │  ← Digital FTEs, Agent Products
+│   (What users & orgs consume)   │
+├─────────────────────────────────┤
+│   LAYER 2: AGENT FRAMEWORKS     │  ← OpenAI Agents SDK, Claude Agent SDK, Google ADK
+│   (How agents are built)        │
+├─────────────────────────────────┤
+│   LAYER 1: FOUNDATION MODELS    │  ← GPT-5, Claude, Gemini (the "brains")
+│   (The reasoning engine)        │
+└─────────────────────────────────┘
+```
+
+> This book focuses on **Layers 2 & 3** — building with frameworks and deploying as applications.
+
+---
+
+### 🔷 6. The AIFF Standards Ecosystem
+
+AIFF = **AI Factory Foundation Standards** — the three protocols that make Digital FTEs interoperable and scalable:
+
+| Standard | Full Name | What It Does |
+|---|---|---|
+| **MCP** | Model Context Protocol | Universal connector — links agents to live data (CRM, SQL, Slack, APIs). The "With-What." |
+| **AGENTS.md** | Agent Specification File | Markdown file defining what an agent can do, its constraints, tools & behavior |
+| **Agent Skills** | SKILL.md files | Modular folders teaching an agent a specific repeatable workflow. The "How-To." |
+
+**How MCP + Skills work together:**
+- **Skills** = the expertise (domain knowledge encoded in SKILL.md)
+- **MCP** = the connectivity (live data access)
+- Together: plug in a Finance MCP + Finance Skill → Finance Agent. Plug in Sales MCP + Sales Skill → Sales Agent
+
+> "Skills provide the expertise. MCP provides the connectivity. Together, they turn a General Agent into a specialized Digital FTE."
+
+---
+
+### 🔷 7. Code as the Universal Interface
+
+A concept unique to this book — agents use CODE not just to build software, but to **interrogate reality**:
+
+**Example — "Why did sales drop in Q3?"**
+- A chatbot: gives a generic answer
+- A General Agent:
+  1. Writes SQL query → fetches real sales data
+  2. Writes Python script → visualizes the trend
+  3. Analyzes the chart
+  4. Answers: *"Sales dropped due to 40% churn in the Enterprise sector"*
+
+> Code = the universal interface between **intent** (what you want to know) and **action** (getting the real answer from real data).
+
+---
+
+### 🔷 8. The Agent Triangle — 3 Deployment Paths
+
+| Path | Type | Examples | Your Role | Analogy | Best When |
+|---|---|---|---|---|---|
+| **A** | General Agents | Claude Code, Cowork, Goose | State the goal | Smart Consultant | Novel problems, exploration |
+| **B** | Custom-Built AI Employees | OpenAI Agents SDK, Google ADK, Claude Agent SDK | Architect the workflow | Build an Assembly Line | Strict guardrails, high volume, customer-facing |
+| **C** | Pre-Built AI Employees | OpenClaw, Manus, Devin, Harvey | Configure & onboard | Hire a Pre-Trained Employee | Speed, always-on, cross-platform |
+
+**Pre-Built categories:**
+- **Horizontal** (general-purpose): OpenClaw, Manus, Lindy AI — multi-domain, always-on, persistent memory
+- **Vertical** (domain-specific): Devin (coding), Harvey (law), emerging specialists in medicine & finance
+
+> OpenClaw reached **209,000+ GitHub stars in under 3 months** — signalling the Buy path is now a mature alternative to building.
+
+---
+
+### 🔷 9. Specifications as Living Contracts
+
+A specification is no longer static documentation. It is a **living contract** between human and AI:
+
+- AI generates implementation from the spec
+- Tests derive from acceptance criteria in the spec
+- Documentation stays synchronized with the spec
+- Changes propagate consistently when the spec updates
+
+> **"In the era of Agents, your Spec is your Source Code."**
+
+Golden Rule: If you can describe the excellence you want, AI can build the agent, skills, and MCP to deliver it.
+
+---
+
+### 🔷 10. The SaaSpocalypse — Real-World Proof (Exam Context!)
+
+On **February 4, 2026**, global software stocks lost nearly **$1 trillion** in market value over 6 sessions. Triggered by Anthropic releasing **11 open-source plugins** for Claude Cowork.
+
+| Company | Drop |
+|---|---|
+| Thomson Reuters | −16% |
+| RELX | −14% |
+| Salesforce | −7% |
+| ServiceNow | −7% |
+
+**Why?** One legal plugin alone — handling NDA triage and compliance — wiped **$285 billion** off legal tech and professional services stocks in a single session.
+
+> The Citrini Research thesis (Feb 24, 2026): *"For the entirety of modern economic history, human intelligence has been the scarce input. We are now experiencing the unwind of that premium."*
+
