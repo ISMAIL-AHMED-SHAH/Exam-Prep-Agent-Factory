@@ -48,6 +48,8 @@
 ### Concept 2 — Code Kya Hota Hai — 60-Second Version
 
 Code = computer ke liye **exact instructions** jo perfectly, kisi bhi speed par, kisi bhi kitni baar follow ki jati hain.
+<img width="1672" height="941" alt="image" src="https://github.com/user-attachments/assets/43bed622-8470-4df2-b03a-c2b703e19c4e" />
+
 
 **Do main languages:**
 
@@ -72,6 +74,8 @@ Code = computer ke liye **exact instructions** jo perfectly, kisi bhi speed par,
 | **P — Precision** | Ghalat digit ke consequences hain | Invoices, payroll, grades, money |
 | **R — Repetition** | Agli hafte/mahine phir uthega yeh kaam | Month-end reports, daily health checks |
 | **F — Files** | Problem files mein rehti hai, sentences mein nahin | Spreadsheets, exports, image folders |
+
+<img width="1672" height="941" alt="image" src="https://github.com/user-attachments/assets/4f7c30ee-e39f-4e6e-bdd6-059b88ac000d" />
 
 **Quick examples:**
 
@@ -161,6 +165,8 @@ Imperfect data ke saath kya ho?
 | **3** | **Plain-English Replay** — code ka procedure plain English mein | Logic errors pakadne ke liye |
 | **4** | **Adversarial Pass** — AI se apna kaam attack karwao | Higher stakes |
 | **5** | **Cross-Model Check** — doosre AI se same brief chalao | Money, grades, signed work |
+<img width="1672" height="941" alt="image" src="https://github.com/user-attachments/assets/478cf730-74df-414f-b12a-a90e77003bb8" />
+
 
 > 💡 **Pharmacist example:** Usne fake 10-unit discrepancy plant ki — script ne plant pakad li + 4 real discrepancies. Plant ne 4 real catches par trust earn kiya. **Data mein known error salt karo — agar script dhoondh le, baaki results earned hain.**
 
@@ -244,6 +250,8 @@ Terminal mein rehte hain. **Reframe:** *"Terminal sirf ek chat box hai jo folder
 - Scripts **forever persist** karte hain
 - Errors **self-heal** hote hain
 - **Scheduled runs** possible hain
+  <img width="1672" height="941" alt="image" src="https://github.com/user-attachments/assets/145cb307-169b-4ce3-b1b2-37a646d2766a" />
+
 
 | Tool | Kya hai |
 |---|---|
@@ -290,6 +298,8 @@ Claude.ai par mistakes free hain. Jab code aap ke machine par chale: **woh exact
 | **2. Dry run maango** | *"Don't change anything. Show me every operation (old → new name) and wait for approval."* |
 | **3. Territory scope karo** | Sab se chhota folder — kabhi home directory ya poori disk nahin |
 | **4. New files mein output** | *"Write results to a new file; leave originals untouched."* |
+<img width="1672" height="941" alt="image" src="https://github.com/user-attachments/assets/b0f0be2d-6b00-4669-b6dc-03599bc20aae" />
+
 
 **Brief mein standing ritual:**
 ```
