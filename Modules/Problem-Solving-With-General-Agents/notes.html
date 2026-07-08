@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Problem Solving with General Agents — Roman Urdu Notes</title>
+<style>
+  :root{
+    --bg:#0f1117; --card:#161a23; --border:#262b38;
+    --text:#e8e9ee; --sub:#9aa0ac; --accent:#7c9eff;
+    --p1:#7c9eff; --p2:#4fd1c5; --p3:#f6ad55; --p4:#f56565; --p5:#b794f4;
+    --warn-bg:#2a1e14; --warn-bd:#f6ad55;
+    --key-bg:#141a2a; --key-bd:#7c9eff;
+  }
+  *{box-sizing:border-box;}
+  body{
+    background:var(--bg); color:var(--text);
+    font-family:'Segoe UI', Tahoma, sans-serif; line-height:1.7;
+    margin:0; padding:24px 12px;
+  }
+  .wrap{max-width:820px; margin:0 auto;}
+  h1.title{font-size:1.6rem; text-align:center; margin-bottom:4px;}
+  p.subtitle{text-align:center; color:var(--sub); margin-top:0; margin-bottom:28px; font-size:0.95rem;}
+  .part-header{
+    display:flex; align-items:center; gap:10px;
+    margin:36px 0 14px 0; padding-bottom:8px;
+    border-bottom:2px solid var(--border);
+  }
+  .part-badge{
+    font-weight:700; font-size:0.85rem; padding:4px 12px; border-radius:20px; color:#0f1117;
+    white-space:nowrap;
+  }
+  .part-title{font-size:1.15rem; font-weight:700;}
+  .card{
+    background:var(--card); border:1px solid var(--border); border-radius:12px;
+    padding:18px 20px; margin-bottom:16px;
+  }
+  .concept-num{
+    display:inline-block; font-size:0.75rem; font-weight:700; color:#0f1117;
+    background:var(--accent); border-radius:6px; padding:2px 9px; margin-bottom:8px;
+  }
+  .concept-title{font-size:1.05rem; font-weight:700; margin:0 0 8px 0;}
+  .failure-tag{
+    display:inline-block; font-size:0.75rem; color:#f6ad55; background:#2a1e14;
+    border-radius:6px; padding:2px 9px; margin-bottom:8px; margin-left:6px;
+  }
+  .body-text{color:var(--text); font-size:0.96rem; margin-bottom:10px;}
+  .key-points{
+    background:var(--key-bg); border-left:4px solid var(--key-bd);
+    border-radius:6px; padding:10px 14px; margin:10px 0; font-size:0.92rem;
+  }
+  .key-points strong{color:var(--accent);}
+  .key-points ul{margin:6px 0 0 0; padding-left:20px;}
+  .key-points li{margin-bottom:4px;}
+  .warning{
+    background:var(--warn-bg); border-left:4px solid var(--warn-bd);
+    border-radius:6px; padding:10px 14px; margin:10px 0; font-size:0.92rem;
+  }
+  .warning strong{color:var(--warn-bd);}
+  code{
+    background:#1e2330; padding:1px 6px; border-radius:4px; font-size:0.87em; color:#9ae6b4;
+  }
+  table.mini{width:100%; border-collapse:collapse; font-size:0.85rem; margin:10px 0;}
+  table.mini th, table.mini td{border:1px solid var(--border); padding:6px 8px; text-align:left;}
+  table.mini th{background:#1a1f2c; color:var(--accent);}
+  .recap-box{
+    margin-top:40px; padding:22px; border-radius:12px;
+    background:linear-gradient(135deg,#1a1f2e,#141824);
+    border:1px solid var(--accent);
+  }
+  .recap-box h2{margin-top:0; font-size:1.1rem; color:var(--accent);}
+  .recap-box ol{padding-left:20px; font-size:0.92rem;}
+  .recap-box li{margin-bottom:6px;}
+  .footer-note{text-align:center; color:var(--sub); font-size:0.8rem; margin-top:30px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1 class="title">🧩 Problem Solving with General Agents</h1>
+  <p class="subtitle">Roman Urdu Notes · 7 Principles + 4-Phase Workflow · GIAIC Agent Factory</p>
+
+  <div class="card">
+    <span class="concept-num">Intro</span>
+    <h3 class="concept-title">Yeh Course Kis Baare Mein Hai</h3>
+    <p class="body-text">AI Prompting course mein aap ne seekha AI se <b>baat</b> karna. Tool courses mein seekha <b>tools</b> (plan mode, skills). Ye course sikhata hai teesri layer: in tools se <b>asal masla achi tarah solve karna</b>. Do students ko same assignment milta hai — Student A 25 minute mein clean, verified summary bana leta hai. Student B 90 minute waste kar deta hai, conversation messy ho jati hai, AI mistakes karta hai, restart karna parta hai. Same AI, same task — farq sirf itna: <b>Student A ne 7 principles follow kiye, Student B ko pata nahi thay.</b></p>
+    <div class="key-points">
+      <strong>Mode 1 vs Mode 2:</strong>
+      <ul>
+        <li><b>Mode 1 — Problem Solving:</b> tool kholo, task solve karo, result ship karo. Yehi is course ka focus hai.</li>
+        <li><b>Mode 2 — Building AI Workers:</b> permanent AI assistants banana jo khud chalte rahein (alag course).</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <span class="concept-num">Foundation</span>
+    <h3 class="concept-title">Lindy Effect — Purane Tools Kyun Important Hain</h3>
+    <p class="body-text">Computing ke sab se important tools sab se purane bhi hain: terminal, files, Git, SQL. Decades se hain aur ab bhi kaam karte hain. <b>Lindy Effect</b> kehta hai: jo cheez lambe arse se useful hai, wo aage bhi useful rahegi.</p>
+    <div class="key-points">
+      <strong>Key Points:</strong>
+      <ul>
+        <li>AI apna naya tareeqa nahi banata — wohi purane proven tools use karta hai (terminal commands, files, git, SQL)</li>
+        <li>Aapka role change hota hai, khatam nahi hota: aap problem define karte ho, result verify karte ho</li>
+        <li>AI in purane tools ko outdated nahi karta — <b>unhein zyada valuable banata hai</b></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- PRINCIPLE 1 -->
+  <div class="part-header">
+    <span class="part-badge" style="background:var(--p1)">PRINCIPLE 1</span>
+    <span class="part-title">Bash is the Key</span>
+  </div>
+  <div class="card">
+    <span class="failure-tag">⚠ Failure it prevents: "Agent only talks, doesn't act"</span>
+    <p class="body-text">Chatbot sirf sawalon ka jawab deta hai. Ye tools <b>action</b> lete hain: files parhte hain, documents likhte hain, commands chalate hain. Bash us black-screen terminal ki zubaan hai. Cowork/OpenWork mein same idea step-cards ke through dikhti hai.</p>
+    <div class="key-points">
+      <strong>Beginner mistake:</strong>
+      <ul>
+        <li>"How should I organize my notes?" → sirf advice milegi, kuch organize nahi hoga</li>
+        <li>Fix: specific instruction do jo ek finished file produce kare, na ke paragraph of suggestions</li>
+      </ul>
+    </div>
+    <div class="warning"><strong>⚠️ Mental model:</strong> Agent ke "hands" hain. Hands ko brief karo, brain ko nahi — method mat batao, sirf outcome batao.</div>
+  </div>
+
+  <!-- PRINCIPLE 2 -->
+  <div class="part-header">
+    <span class="part-badge" style="background:var(--p2)">PRINCIPLE 2</span>
+    <span class="part-title">Code as Universal Interface</span>
+  </div>
+  <div class="card">
+    <span class="failure-tag">⚠ Failure it prevents: "Prose request keeps getting misread"</span>
+    <p class="body-text">Do parts hain: (1) jab task ek command se zyada complex ho, AI code likh kar solve karta hai. (2) Format utna hi zaroori hai jitna khud request — plain paragraph vague hota hai, table/checklist/schema clear hota hai.</p>
+    <div class="key-points">
+      <strong>Bash vs Code:</strong>
+      <ul>
+        <li><b>Bash (P1) = Hands</b> — navigate, search, move, one command at a time</li>
+        <li><b>Code (P2) = Brain</b> — compute, transform, orchestrate, persist, integrate</li>
+      </ul>
+      <strong>5 Powers jo Code deta hai:</strong>
+      <ul>
+        <li>Precise thinking (exact numbers, not rough guesses)</li>
+        <li>Workflow orchestration (multi-step rules ek sath run hoti hain)</li>
+        <li>Organized memory (folders/files se progress save)</li>
+        <li>Universal compatibility (alag formats ek sath combine)</li>
+        <li>Instant tool creation (jo app exist nahi karti, AI khud bana deta hai)</li>
+      </ul>
+    </div>
+    <div class="warning"><strong>⚠️ Aapke do kaam hamesha rehte hain:</strong> (1) Problem clearly define karna (format batao, words nahi), (2) Result verify karna (code parh sako, ya claims source se match karo).</div>
+  </div>
+
+  <!-- PRINCIPLE 3 -->
+  <div class="part-header">
+    <span class="part-badge" style="background:var(--p3)">PRINCIPLE 3</span>
+    <span class="part-title">Verification as a Core Step</span>
+  </div>
+  <div class="card">
+    <span class="failure-tag">⚠ Failure it prevents: "Output looks right but breaks in production"</span>
+    <p class="body-text">Finished-looking output verified output nahi hota. Models <b>plausible</b> cheezein banate hain, jo <b>correct</b> se different hai. Verification workflow ka ek <b>step</b> honi chahiye, afterthought nahi.</p>
+    <div class="key-points">
+      <strong>Key Rule:</strong>
+      <ul>
+        <li>Jis agent ne output banaya, wohi uska sab se kharab verifier hai — same blind spots hote hain</li>
+        <li>Verification ko <b>independent path</b> chahiye: apni reading, alag model, test, type-checker, ya database constraint</li>
+        <li>"Is this correct?" khud usi AI se poochna real verification nahi — wo tarafdari karega</li>
+      </ul>
+    </div>
+    <div class="warning"><strong>⚠️ Verification prompt pattern:</strong> Har factual claim list karo → source location dhoondo aur exact quote lo → jo claim ground na ho, flag karo → jab tak sab flags resolve na hon, save mat karo.</div>
+  </div>
+
+  <!-- PRINCIPLE 4 -->
+  <div class="part-header">
+    <span class="part-badge" style="background:var(--p4)">PRINCIPLE 4</span>
+    <span class="part-title">Small, Reversible Decomposition</span>
+  </div>
+  <div class="card">
+    <span class="failure-tag">⚠ Failure it prevents: "One big change nuked an afternoon"</span>
+    <p class="body-text">Bara task chote steps mein torro. Ek step khatam karo → check karo sahi hai → save karo → agla step. 12-step task ek message mein doge to AI step 5 tak drift kar jata hai.</p>
+    <div class="key-points">
+      <strong>Rule of Thumb:</strong>
+      <ul>
+        <li>Agar kisi change ko reverse karne mein 2 minute se zyada lagega, to change bara tha</li>
+        <li><b>Pixar lesson:</b> 1998 mein Toy Story 2 ki files accidentally delete hui — sirf ek employee ki personal backup ne film bachai. Saving progress "yaad rakhne wali cheez" nahi, process mein built-in honi chahiye</li>
+        <li><b>Undo trap:</b> <code>git reset --hard</code> sab kuch last save point tak erase karta hai — agar tumne save (commit) nahi kiya, wo gaya</li>
+      </ul>
+    </div>
+    <div class="warning"><strong>⚠️ Enforcement prompt:</strong> Task ko sab se chote steps mein todo. Har step ke baad: (1) dikhao kya kiya, (2) verification check chalao, (3) commit/save karo, (4) agla step shuru karne se pehle meri OK ka wait karo.</div>
+  </div>
+
+  <!-- PRINCIPLE 5 -->
+  <div class="part-header">
+    <span class="part-badge" style="background:var(--p5)">PRINCIPLE 5</span>
+    <span class="part-title">Persisting State in Files</span>
+  </div>
+  <div class="card">
+    <span class="failure-tag">⚠ Failure it prevents: "Agent forgets what we decided yesterday"</span>
+    <p class="body-text">Conversation band karte hi AI sab bhool jata hai. Fix: important info ko <b>file</b> mein save karo. Sab se important file <b>rules file</b> hai — Claude Code/Cowork mein <code>CLAUDE.md</code>, OpenCode/OpenWork mein <code>AGENTS.md</code>. AI har naya session shuru hote hi ye automatically parhta hai.</p>
+    <div class="key-points">
+      <strong>Key Points:</strong>
+      <ul>
+        <li>Run <code>/init</code> — first draft khud ban jata hai</li>
+        <li>Length: first draft under 250 words, weeks baad under 60 lines. 500 words se zyada = documentation ban gayi, bohat lambi</li>
+        <li>Har line isliye ho ke kuch mistake hui thi uske bina</li>
+        <li>Shape: What this is → Where things live → Critical rules → On-demand references</li>
+        <li><b>Plan files:</b> multi-session tasks ke liye — "Read plans/q4-launch.md aur step 4 se continue karo"</li>
+        <li>Jab files kaam na dein (repeat questions har baar naya code chahiye), <b>database</b> use karo (jaise Neon)</li>
+      </ul>
+    </div>
+    <div class="warning"><strong>⚠️ Hierarchy:</strong> Conversation = volatile. Project folder files = durable. Referenced files = on-demand.</div>
+  </div>
+
+  <!-- PRINCIPLE 6 -->
+  <div class="part-header">
+    <span class="part-badge" style="background:var(--p1)">PRINCIPLE 6</span>
+    <span class="part-title">Constraints and Safety</span>
+  </div>
+  <div class="card">
+    <span class="failure-tag">⚠ Failure it prevents: "Agent touched files I didn't authorize"</span>
+    <p class="body-text">Limits problem nahi hain — <b>yehi AI ko safe banate hain</b>. Agar AI kuch bhi bina pooche kar sakta hai, to har second watch karna parega. Limits set karne se AI slow nahi hota — balke aap AI ko zyada freedom de sakte ho bharosay se.</p>
+    <div class="key-points">
+      <strong>3 Universal Trust Levers:</strong>
+      <ul>
+        <li><b>Scope</b> — kaunsi files/folders AI dekh sakta hai</li>
+        <li><b>Connections</b> — kaunsi external services tak pohanch sakta hai</li>
+        <li><b>Approvals</b> — kab AI aapki OK ka wait karta hai</li>
+      </ul>
+      <strong>Autonomy Ladder (5 rungs):</strong>
+      <ul>
+        <li>1. Watching closely → 2. Ambient supervision → 3. Walk away → 4. Act without asking → 5. Scheduled/automated</li>
+      </ul>
+    </div>
+    <div class="warning"><strong>⚠️ Prompt-injection trap:</strong> Bahar se aayi files (email, PDF, resume) mein hidden instructions ho sakti hain. Outside files ke sath "watching closely" level pe raho. Agar AI ka plan aisi files/services mention kare jo tumne nahi mangi, approve mat karo.</div>
+  </div>
+
+  <!-- PRINCIPLE 7 -->
+  <div class="part-header">
+    <span class="part-badge" style="background:var(--p2)">PRINCIPLE 7</span>
+    <span class="part-title">Observability</span>
+  </div>
+  <div class="card">
+    <span class="failure-tag">⚠ Failure it prevents: "Don't know what the agent actually did"</span>
+    <p class="body-text">Sirf wohi direct kar sakte ho jo dekh sakte ho. Agent ka har meaningful action tumhein real-time ke qareeb visible hona chahiye. Ek novel task pe kam se kam ek dafa execution view zaroor dekho — "agent ne kuch aisa kiya jo expect nahi tha" ka sab se bara reason: user ne dekha hi nahi tha.</p>
+    <div class="key-points">
+      <strong>5 Symptoms — Session Off the Rails:</strong>
+      <ul>
+        <li>Chat ke unrelated purane parts reference karta hai</li>
+        <li>Responses lambe aur vague ho jate hain, hedging barh jati hai</li>
+        <li>Kisi purani constraint se contradict karta hai</li>
+        <li>Baar baar apologize karta hai bina progress ke</li>
+        <li>Aisi files/folders/connectors chhoone ka propose karta hai jo mention nahi hui thin</li>
+      </ul>
+    </div>
+    <div class="warning"><strong>⚠️ Jab ye symptoms dikhein:</strong> Typing rok do. Aur prompt se fix karne ki koshish mat karo — <code>/clear</code> chalao ya naya session kholo, sirf zaroori 1-2 facts paste karo, wahin se continue karo. Reset almost hamesha rescue se faster hota hai.</div>
+  </div>
+
+  <!-- FOUR PHASE WORKFLOW -->
+  <div class="part-header">
+    <span class="part-badge" style="background:var(--p3)">PART 2</span>
+    <span class="part-title">The Four-Phase Workflow</span>
+  </div>
+  <div class="card">
+    <p class="body-text">7 principles production mein ek 4-phase loop mein simat jate hain. Loop haath mein aa jaye to principles phases ke andar khud-ba-khud fire hote hain.</p>
+    <div class="key-points">
+      <strong>4 Phases:</strong>
+      <ul>
+        <li><b>1. Explore</b> (Bash + Observability) — relevant files parho, unknowns samne lao. Read-only, koi writes nahi</li>
+        <li><b>2. Plan</b> (Code-as-Interface + Persistence) — structured artifact ke tor par likha hua plan banao, save karo. <b>Ye sab se important phase hai — zyada tar leverage yahin hai</b></li>
+        <li><b>3. Implement</b> (Decomposition + Verification) — plan ko chote atomic steps mein execute karo, har step ke baad verify karo, commit/save karo</li>
+        <li><b>4. Commit</b> (Observability) — final verification pass, decisions ko rules file mein wapas save karo agli baar ke liye</li>
+      </ul>
+    </div>
+    <div class="warning"><strong>⚠️ Constraints (P6) sab ko wrap karta hai:</strong> ye ek phase nahi, poore loop ke around ki boundary hai — scope, connectors, approval mode session start pe set hote hain aur har phase ko govern karte hain.</div>
+  </div>
+
+  <!-- FIVE FAILURE PATTERNS -->
+  <div class="part-header">
+    <span class="part-badge" style="background:var(--p4)">PART 2</span>
+    <span class="part-title">5 Failure Patterns</span>
+  </div>
+  <div class="card">
+    <p class="body-text">Jab loop mein kuch ghalat ho, wo taqreeban hamesha in 5 named patterns mein se ek hota hai. Pattern pehchanna batata hai kaunsa principle use karna hai.</p>
+    <table class="mini">
+      <tr><th>#</th><th>Pattern</th><th>Symptom</th><th>Fix (Principle)</th></tr>
+      <tr><td>1</td><td>The Drift</td><td>Agent brief se dheere dheere hat jata hai</td><td>P5 — Persistence</td></tr>
+      <tr><td>2</td><td>The Confident Wrong</td><td>Plausible lekin chupke se galat output</td><td>P3 — Verification</td></tr>
+      <tr><td>3</td><td>The Big Bang</td><td>Ek bara change ghanton ka kaam nuke kar deta hai</td><td>P4 — Decomposition</td></tr>
+      <tr><td>4</td><td>The Scope Creep</td><td>Agent aisi cheezein chhoo leta hai jo authorize nahi thin</td><td>P6 — Constraints</td></tr>
+      <tr><td>5</td><td>The Black Box</td><td>Agent 20 minute chala, pata nahi kya kiya</td><td>P7 — Observability</td></tr>
+    </table>
+  </div>
+
+  <!-- WORKED EXAMPLE -->
+  <div class="part-header">
+    <span class="part-badge" style="background:var(--p5)">PART 3</span>
+    <span class="part-title">A Worked Example</span>
+  </div>
+  <div class="card">
+    <p class="body-text">Task family: ek complex incoming artifact review karo, jo matter karta hai wo identify karo, verified claims ke sath structured response produce karo.</p>
+    <div class="key-points">
+      <strong>Do tracks, same shape:</strong>
+      <ul>
+        <li><b>Engineer track:</b> contractor ka pull request — diff review, risks flag, response likho</li>
+        <li><b>Domain-expert track:</b> vendor ka master services agreement — redline standard se deviations flag, comparison memo</li>
+      </ul>
+      <strong>4 Phases is task pe:</strong>
+      <ul>
+        <li>Explore → PR diff ya MSA parho, read-only summary save karo</li>
+        <li>Plan → structured review/redline plan banao (severity HIGH/MED/LOW ke sath), approval ke liye pause karo</li>
+        <li>Implement → plan ko chote steps mein execute karo, har concern verify karo</li>
+        <li>Commit → final check, rules file update karo agli baar ke liye</li>
+      </ul>
+    </div>
+    <div class="warning"><strong>⚠️ Note:</strong> Domain alag ho sakta hai (PR ho ya MSA), lekin workflow shape identical rehti hai — yehi is principle ko portable banata hai.</div>
+  </div>
+
+  <div class="recap-box">
+    <h2>📝 One-Line Recap — Sab Concepts</h2>
+    <ol>
+      <li>Lindy Effect: purane proven tools (terminal, files, git, SQL) AI ke sath aur zyada valuable ban jate hain</li>
+      <li>P1 — Bash is the Key: AI ko doer treat karo, advisor nahi; hands ko brief karo</li>
+      <li>P2 — Code as Interface: complex task ke liye code, aur format utna hi zaroori jitna content</li>
+      <li>P3 — Verification: output ko independent path se verify karo, khud se nahi</li>
+      <li>P4 — Small Reversible Decomposition: bara task chote steps mein, har step ke baad checkpoint</li>
+      <li>P5 — Persisting State in Files: rules file (CLAUDE.md/AGENTS.md) mein important decisions save karo</li>
+      <li>P6 — Constraints and Safety: scope + connections + approvals set karo, autonomy ladder dheere climb karo</li>
+      <li>P7 — Observability: execution view novel task pe zaroor dekho, 5 symptoms pe reset karo</li>
+      <li>4-Phase Workflow: Explore → Plan → Implement → Commit, Constraints (P6) sab ko wrap karta hai</li>
+      <li>5 Failure Patterns: Drift, Confident Wrong, Big Bang, Scope Creep, Black Box — har ek ka apna fixing principle</li>
+      <li>Worked example: domain chahe jo bhi ho, workflow shape same rehti hai — yehi portability hai</li>
+    </ol>
+  </div>
+
+  <p class="footer-note">Built for Ismail Ahmed Shah · GIAIC P1-AFAP Exam Prep · 2026</p>
+</div>
+</body>
+</html>
