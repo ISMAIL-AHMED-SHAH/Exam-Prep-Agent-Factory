@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Markdown In, HTML Out — Roman Urdu Notes</title>
+<style>
+  :root{
+    --bg:#0f1117; --card:#161a23; --border:#262b38;
+    --text:#e8e9ee; --sub:#9aa0ac; --accent:#7c9eff;
+    --p1:#7c9eff; --p2:#4fd1c5; --p3:#f6ad55; --p4:#b794f4;
+    --warn-bg:#2a1e14; --warn-bd:#f6ad55;
+    --key-bg:#141a2a; --key-bd:#7c9eff;
+  }
+  *{box-sizing:border-box;}
+  body{
+    background:var(--bg); color:var(--text);
+    font-family:'Segoe UI', Tahoma, sans-serif; line-height:1.7;
+    margin:0; padding:24px 12px;
+  }
+  .wrap{max-width:820px; margin:0 auto;}
+  h1.title{font-size:1.6rem; text-align:center; margin-bottom:4px;}
+  p.subtitle{text-align:center; color:var(--sub); margin-top:0; margin-bottom:28px; font-size:0.95rem;}
+  .part-header{
+    display:flex; align-items:center; gap:10px;
+    margin:36px 0 14px 0; padding-bottom:8px;
+    border-bottom:2px solid var(--border);
+  }
+  .part-badge{
+    font-weight:700; font-size:0.85rem; padding:4px 12px; border-radius:20px; color:#0f1117;
+    white-space:nowrap;
+  }
+  .part-title{font-size:1.15rem; font-weight:700;}
+  .card{
+    background:var(--card); border:1px solid var(--border); border-radius:12px;
+    padding:18px 20px; margin-bottom:16px;
+  }
+  .concept-num{
+    display:inline-block; font-size:0.75rem; font-weight:700; color:#0f1117;
+    background:var(--accent); border-radius:6px; padding:2px 9px; margin-bottom:8px;
+  }
+  .concept-title{font-size:1.05rem; font-weight:700; margin:0 0 8px 0;}
+  .body-text{color:var(--text); font-size:0.96rem; margin-bottom:10px;}
+  .key-points{
+    background:var(--key-bg); border-left:4px solid var(--key-bd);
+    border-radius:6px; padding:10px 14px; margin:10px 0; font-size:0.92rem;
+  }
+  .key-points strong{color:var(--accent);}
+  .key-points ul{margin:6px 0 0 0; padding-left:20px;}
+  .key-points li{margin-bottom:4px;}
+  .warning{
+    background:var(--warn-bg); border-left:4px solid var(--warn-bd);
+    border-radius:6px; padding:10px 14px; margin:10px 0; font-size:0.92rem;
+  }
+  .warning strong{color:var(--warn-bd);}
+  code{
+    background:#1e2330; padding:1px 6px; border-radius:4px; font-size:0.87em; color:#9ae6b4;
+  }
+  table.mini{width:100%; border-collapse:collapse; font-size:0.85rem; margin:10px 0;}
+  table.mini th, table.mini td{border:1px solid var(--border); padding:6px 8px; text-align:left;}
+  table.mini th{background:#1a1f2c; color:var(--accent);}
+  .recap-box{
+    margin-top:40px; padding:22px; border-radius:12px;
+    background:linear-gradient(135deg,#1a1f2e,#141824);
+    border:1px solid var(--accent);
+  }
+  .recap-box h2{margin-top:0; font-size:1.1rem; color:var(--accent);}
+  .recap-box ol{padding-left:20px; font-size:0.92rem;}
+  .recap-box li{margin-bottom:6px;}
+  .footer-note{text-align:center; color:var(--sub); font-size:0.8rem; margin-top:30px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1 class="title">📝 Markdown In, HTML Out</h1>
+  <p class="subtitle">Roman Urdu Notes · 14 Concepts · 4 Parts · GIAIC Agent Factory</p>
+
+  <div class="card">
+    <span class="concept-num">Intro</span>
+    <h3 class="concept-title">Do Document Languages</h3>
+    <p class="body-text"><b>Markdown</b> plain text hai jisme thoray extra marks structure dikhate hain (<code>#</code> heading ke liye, <code>-</code> list item ke liye). <b>HTML</b> wo language hai jis se web pages banti hain. Dono programming nahi hain. Skill ye hai: kaunsa format kis direction mein use karna hai.</p>
+    <div class="key-points">
+      <strong>Power users ka split:</strong>
+      <ul>
+        <li>AI ko <b>Markdown mein likho</b> — structure guessing khatam kar deta hai</li>
+        <li>AI se <b>HTML mein jawab mango</b> — designed page hi wo lamba jawab hai jo koi busy insaan actually parhta hai</li>
+      </ul>
+    </div>
+    <div class="warning"><strong>⚠️ Asal sawal jo har format decision settle karta hai:</strong> <i>"Ye document sab se aakhir mein kaun parhega?"</i> Insaan browser mein → HTML. AI (ya future chat) → Markdown. Social feed → plain text.</div>
+  </div>
+
+  <!-- PART 1 -->
+  <div class="part-header">
+    <span class="part-badge" style="background:var(--p1)">PART 1</span>
+    <span class="part-title">The Two Languages</span>
+  </div>
+
+  <div class="card">
+    <span class="concept-num">Concept 1</span>
+    <h3 class="concept-title">Why Agents Need Structure</h3>
+    <p class="body-text">Ek admin ne agent ko prose mein likha "younger kids ko afternoon heat mein mat rakhna" — agent ne phir bhi under-8 races 2pm pe schedule kar din, kyunke constraint sentence ke andar dabi hui thi. Jab usne ek alag <code>## Hard constraints</code> heading banaya, agent ne perfectly follow kiya.</p>
+    <div class="key-points">
+      <strong>Key Rule:</strong>
+      <ul>
+        <li>Constraint ki <b>information nahi badli</b> — sirf structure mein uski <b>visibility</b> badli</li>
+        <li>Jo cheez agent ko galat nahi karni chahiye, wo apni <b>alag heading ya bullet</b> mein honi chahiye, kabhi sentence ke andar nahi</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <span class="concept-num">Concept 2</span>
+    <h3 class="concept-title">The Asymmetry: Markdown In, HTML Out</h3>
+    <p class="body-text">Pehle AI hamesha Markdown mein jawab deta tha. Ab Anthropic ke Thariq Shihipar ke mutabiq: lambi Markdown <b>unreadable</b> hoti hai (100 lines ke baad log parhna chhor dete hain), uski <b>ceiling low</b> hai (sirf headings/lists/tables), jabke HTML ki <b>ceiling almost na-mumkin</b> hai (styled tables, diagrams, interactivity) aur wo <b>shareable</b> hai (link click, kuch install nahi karna).</p>
+    <table class="mini">
+      <tr><th>Direction</th><th>Format</th><th>Wajah</th></tr>
+      <tr><td>Aap → Agent</td><td>Markdown</td><td>Structure ambiguity hatati hai</td></tr>
+      <tr><td>Agent → Aap</td><td>HTML</td><td>Rich, readable, shareable</td></tr>
+      <tr><td>Agent → Agent</td><td>Markdown</td><td>Compact, precise context</td></tr>
+    </table>
+    <div class="warning"><strong>⚠️ "HTML out" ki ek condition hai — reader insaan ho.</strong> Naya chat kuch yaad nahi rakhta, isliye aaj ke notes jo kal ke fresh chat mein paste karoge, wo bhi "agent → agent" hain, chahe dono taraf insaan hi ho. Confusion ho to Markdown chuno.</div>
+  </div>
+
+  <!-- PART 2 -->
+  <div class="part-header">
+    <span class="part-badge" style="background:var(--p2)">PART 2</span>
+    <span class="part-title">Markdown, the Writing Language</span>
+  </div>
+
+  <div class="card">
+    <span class="concept-num">Concept 3</span>
+    <h3 class="concept-title">Headings: AI Ko Batao Kya Important Hai</h3>
+    <p class="body-text"><code>#</code> heading banata hai, zyada <code>#</code> deeper level. Headings AI ko batati hain kya important hai aur kaunsa detail kis section ke neeche aata hai.</p>
+    <div class="key-points">
+      <strong>3 Rules jo 90% mistakes rokte hain:</strong>
+      <ul>
+        <li>Ek document mein sirf <b>ek</b> <code>#</code> title — do titles matlab do documents fuse ho gaye</li>
+        <li>Level skip mat karo (<code>#</code> se seedha <code>###</code>) — tree toot jata hai</li>
+        <li>Headings ko <b>claims</b> banao, labels nahi — "Budget" nahi, "Budget: PKR 50,000 hard ceiling"</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <span class="concept-num">Concept 4</span>
+    <h3 class="concept-title">Lists: Bullets for Sets, Numbers for Sequences</h3>
+    <p class="body-text"><b>Bullets (-)</b> kehte hain: ye ek <i>set</i> hai, order matter nahi karta, har item independently true hai. <b>Numbers (1.)</b> kehte hain: ye ek <i>sequence</i> hai, order hi point hai — step 3, step 2 assume karta hai.</p>
+    <div class="key-points">
+      <strong>Key Rule:</strong>
+      <ul>
+        <li>Numbered list do to agent order ko instruction ka hissa samajhta hai — kabhi step 4 se step 1 se pehle shuru nahi karega</li>
+        <li><b>Checkable-bullet habit:</b> "Page fast honi chahiye" checkable nahi. "Page 3G pe 3 second mein load ho" checkable hai</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <span class="concept-num">Concept 5</span>
+    <h3 class="concept-title">Code Blocks: Triple Backticks</h3>
+    <p class="body-text">Triple backticks (<code>```</code>) AI ko batate hain "ye <b>data</b> hai, instruction nahi." Bina fence ke, agent har cheez ko instruction samajh kar follow karne ki koshish karta hai — jaise ek error message mein "delete all rows? (y/n)" likha ho aur agent usay execute karne lage.</p>
+    <div class="key-points">
+      <strong>Sab se useful trick:</strong>
+      <ul>
+        <li>Sirf format describe mat karo — ek <b>example row fence mein dikhao</b>. Concrete example ko misread karna mushkil hai, written description ko easy</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <span class="concept-num">Concept 6</span>
+    <h3 class="concept-title">Links and Images</h3>
+    <p class="body-text">Prompt mein link do to AI usay actually visit kar ke parh sakta hai — apni memory se guess karne ke bajaye. Image ke liye <code>![description]</code> — brackets ke andar description hi wo cheez hai jo AI dekhte waqt "parhta" hai, ek caption ki tarah jo batati hai kis pe dhyan dena hai.</p>
+  </div>
+
+  <div class="card">
+    <span class="concept-num">Concept 7</span>
+    <h3 class="concept-title">Your First Complete Specification</h3>
+    <p class="body-text">Poora spec skeleton: <b>Goal → Context → Requirements → Hard constraints → Out of scope → Expected output.</b> Do sections sab se zyada kaam karte hain: <b>Out of scope</b> (enthusiastic over-delivery rokta hai) aur <b>Expected output</b> (format drift rokta hai).</p>
+    <div class="key-points">
+      <strong>Sab se important habit:</strong>
+      <ul>
+        <li><b>Spec ko execute karne se pehle validate karo:</b> agent se poocho ambiguities list karo, missing constraints batao, spec ko 10 mein se grade karo</li>
+        <li>2-3 rounds mein spec 6 se 9 tak jati hai — ye sab se sasti quality improvement hai, kyunke har downstream artifact spec ki clarity inherit karta hai</li>
+      </ul>
+    </div>
+    <div class="warning"><strong>⚠️ Mindset shift:</strong> Specification "kaam se pehle ka paperwork" nahi — <b>ye khud asal kaam hai.</b> Spec improve karo, har regeneration improve ho jati hai.</div>
+  </div>
+
+  <!-- PART 3 -->
+  <div class="part-header">
+    <span class="part-badge" style="background:var(--p3)">PART 3</span>
+    <span class="part-title">HTML, the Reading Language</span>
+  </div>
+
+  <div class="card">
+    <span class="concept-num">Concept 8</span>
+    <h3 class="concept-title">Why Ask for HTML at All</h3>
+    <p class="body-text">HTML 5 cheezein add karta hai: <b>Information density</b> (tables, diagrams, ASCII art ke bajaye), <b>Navigability</b> (tabs, table of contents), <b>Shareability</b> (link click, install nahi), <b>Interactivity</b> (sliders, toggles), aur <b>"copy back" loop</b> (settings text ke tor par wapas mil jati hain).</p>
+    <div class="warning"><strong>⚠️ Honest caveat:</strong> HTML Markdown se zyada tokens use karta hai — 3-line answer ke liye pure overhead hai. Trade tab worth hai jab output lamba, visual, shared, ya revisited ho. Quick chat back-and-forth mein plain response hi sahi default hai.</div>
+  </div>
+
+  <div class="card">
+    <span class="concept-num">Concept 9</span>
+    <h3 class="concept-title">You Don't Write HTML; You Prompt For It</h3>
+    <p class="body-text">Trigger word ("HTML artifact") easy hai. Asal skill <b>brief</b> mein hai. "Ek page banao" kehna "khana banao" kehne jaisa hai — kuch to milega, lekin jo chahiye tha wo nahi.</p>
+    <div class="key-points">
+      <strong>Har HTML request mein 4 cheezein:</strong>
+      <ul>
+        <li><b>Kaun parhega</b> — ek co-founder laptop pe ek dafa, ya reference jo baar baar khulega?</li>
+        <li><b>Kya hona chahiye</b> — specific pieces naam se batao (diagram, table, summary strip)</li>
+        <li><b>Interactive honi chahiye ya nahi</b> — sliders? copy button? tabs?</li>
+        <li><b>Kaise parhi jayegi</b> — "ek dafa parhna" vs "reference" vs "client ko forward karna"</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <span class="concept-num">Concept 10</span>
+    <h3 class="concept-title">The Five HTML Patterns</h3>
+    <table class="mini">
+      <tr><th>#</th><th>Pattern</th><th>Kab Use Karein</th></tr>
+      <tr><td>1</td><td>Plans &amp; Explorations</td><td>Decision se pehle multiple options grid mein compare karna</td></tr>
+      <tr><td>2</td><td>Explainers &amp; Reports</td><td>Lamba document ek-page HTML summary mein badalna</td></tr>
+      <tr><td>3</td><td>Code Review</td><td>Color-coded diffs, annotated code</td></tr>
+      <tr><td>4</td><td>Design Prototypes</td><td>Jo words mein describe karna mushkil ho (color, roundness) — live sliders</td></tr>
+      <tr><td>5</td><td>Throwaway Editors</td><td>One-time drag-drop tool (prioritize, sort, rank), phir export karke discard</td></tr>
+    </table>
+    <div class="key-points">
+      <strong>Through-line:</strong>
+      <ul>
+        <li>Har pattern mein: Markdown/data <b>andar jata hai</b>, HTML <b>bahar aata hai</b>, aur jo conversation continue karna ho wo text ke tor par <b>wapas aata hai</b></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <span class="concept-num">Concept 11</span>
+    <h3 class="concept-title">When the Destination Is a Feed, Not a Browser</h3>
+    <p class="body-text">Social feed browser nahi hai. WhatsApp, LinkedIn, Facebook aapki formatting ignore karte hain — sirf plain text dikhate hain. Raw HTML paste karna hamesha ghalat hai (angle brackets ki wall ban jati hai).</p>
+    <div class="key-points">
+      <strong>Key Points:</strong>
+      <ul>
+        <li><b>WhatsApp:</b> sirf <code>*bold*</code> aur <code>_italic_</code> chalta hai, baaki sab ignore</li>
+        <li><b>LinkedIn/Facebook:</b> plain text, pehli line attention pakarni chahiye (LinkedIn "…see more" ke peeche baaki chupa deta hai)</li>
+        <li>HTML sirf 2 jagah matter karta hai: <b>link preview card</b> (Open Graph tags se) aur <b>designed images</b> jo HTML se bana kar PNG save ki jayein</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <span class="concept-num">Concept 12</span>
+    <h3 class="concept-title">Publishing: From Artifact to Link</h3>
+    <table class="mini">
+      <tr><th>Zaroorat</th><th>Option</th></tr>
+      <tr><td>Abhi share karna, kuch setup nahi</td><td>Claude.ai publish button</td></tr>
+      <tr><td>File rakhni aur baad mein edit karni</td><td>GitHub Gist</td></tr>
+      <tr><td>Apne web address pe permanent page</td><td>GitHub Pages</td></tr>
+      <tr><td>Permanent page, simplest setup</td><td>Netlify (drag-and-drop)</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <span class="concept-num">Concept 13</span>
+    <h3 class="concept-title">When the Destination Is a Document, Not a Browser</h3>
+    <p class="body-text">Sawal ab thora aage barhta hai: <i>"kaun parhega, aur wo is se karega kya?"</i> Sign karna, print, edit, present, ya numbers pe kaam — har action apna format mangta hai.</p>
+    <div class="key-points">
+      <strong>Format by Action:</strong>
+      <ul>
+        <li>Sirf parhna → <b>HTML link</b></li>
+        <li>Sign/print/file → <b>PDF</b></li>
+        <li>Edit/comment → <b>Word (.docx)</b></li>
+        <li>Present → <b>Slides (.pptx)</b></li>
+        <li>Numbers pe kaam → <b>Excel (.xlsx)</b></li>
+        <li>Doosre tool mein feed → <b>CSV</b></li>
+      </ul>
+    </div>
+    <div class="warning"><strong>⚠️ Parallel:</strong> "CSV data ke liye wohi hai jo Markdown text ke liye hai" — plain, machine-facing. "Excel data ke liye wohi hai jo HTML text ke liye hai" — visual, human-facing.</div>
+  </div>
+
+  <!-- PART 4 -->
+  <div class="part-header">
+    <span class="part-badge" style="background:var(--p4)">PART 4</span>
+    <span class="part-title">One Exercise, Three Motions</span>
+  </div>
+
+  <div class="card">
+    <span class="concept-num">Concept 14</span>
+    <h3 class="concept-title">The Three Motions</h3>
+    <p class="body-text">Same skill, teen tareeqon se apply hoti hai: <b>Chat</b> (Claude.ai/ChatGPT/Gemini — jo paste karo usi pe kaam), <b>Terminal</b> (Claude Code/OpenCode — poore folder ki files khud parh leta hai), <b>Desktop</b> (Cowork/OpenWork — visual app, plan dikhata hai aur approval ka wait karta hai).</p>
+    <div class="key-points">
+      <strong>Kaunsa Motion Kab:</strong>
+      <ul>
+        <li>Notes ek paste/attachment mein fit hon → <b>Chat</b></li>
+        <li>Notes bikhri hui hon multiple files/folders mein → <b>Terminal</b></li>
+        <li>Visual app chahiye jo touch karne se pehle poochay → <b>Desktop</b></li>
+      </ul>
+    </div>
+    <div class="warning"><strong>⚠️ Desktop tools ke sath hamesha:</strong> "pehle plan dikhao, jab tak main 'go' na kahoon kuch mat likho." Ye plan-then-approve habit zaroori hai jab bhi AI tool real files touch kar sakta ho.</div>
+  </div>
+
+  <div class="recap-box">
+    <h2>📝 One-Line Recap — Sab Concepts</h2>
+    <ol>
+      <li>Structure requests headings/bullets se karo — jo galat nahi hona chahiye, apni heading/bullet mein rakho</li>
+      <li>Asymmetry: aap → agent Markdown, agent → aap HTML, agent → agent Markdown. Sawal: "kaun parhega last?"</li>
+      <li>Headings batati hain kya important hai — ek title, no skipped levels, claims banao labels nahi</li>
+      <li>Bullets = set (order matter nahi), Numbers = sequence (order hi point hai)</li>
+      <li>Triple backticks: "ye data hai, instruction nahi" — example row show karo, sirf describe mat karo</li>
+      <li>Links AI ko real page parhne dete hain; image caption wahi hai jo AI "dekhta" hai</li>
+      <li>Spec skeleton: Goal → Context → Requirements → Hard constraints → Out of scope → Expected output. Execute se pehle validate karo</li>
+      <li>HTML 5 cheezein deta hai: density, navigability, shareability, interactivity, copy-back loop — lekin short answers ke liye overhead hai</li>
+      <li>HTML mangte waqt 4 batao: kaun parhega, kya hona chahiye, interactive ya nahi, kaise parha jayega</li>
+      <li>5 Patterns: Plans/Explorations, Explainers/Reports, Code Review, Design Prototypes, Throwaway Editors</li>
+      <li>Social feed browser nahi — plain text post karo, HTML sirf preview card aur image ke liye</li>
+      <li>Publishing: Claude.ai publish (fastest) → GitHub Gist → GitHub Pages → Netlify (permanent options)</li>
+      <li>Document destination format se decide hoti hai: PDF sign/file, Word edit, Slides present, Excel numbers, CSV machine</li>
+      <li>3 Motions: Chat (paste), Terminal (files khud parhta hai), Desktop (plan-then-approve)</li>
+    </ol>
+  </div>
+
+  <p class="footer-note">Built for Ismail Ahmed Shah · GIAIC P1-AFAP Exam Prep · 2026</p>
+</div>
+</body>
+</html>
