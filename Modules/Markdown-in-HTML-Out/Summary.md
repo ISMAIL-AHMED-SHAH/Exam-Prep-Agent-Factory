@@ -28,7 +28,7 @@ Learning when and where to use each format makes your prompts clearer, your outp
 
 Click the image below to open the slides.
 
-[![Google Slides](images/slides-preview.png)](https://docs.google.com/presentation/d/1P2nO1M7s5TMpOA8cTOMVy1mPiIgv6KKalm0nJlKoG90)
+[![Google Slides](images/md-to-html.png)](https://docs.google.com/presentation/d/1P2nO1M7s5TMpOA8cTOMVy1mPiIgv6KKalm0nJlKoG90)
 
 ## 🎯 Learning Outcomes
 
