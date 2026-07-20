@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OpenClaw — Meet Your Personal AI Employee — Roman Urdu Notes</title>
+<style>
+  :root{
+    --bg:#0f1117; --card:#161a23; --border:#262b38;
+    --text:#e8e9ee; --sub:#9aa0ac; --accent:#7c9eff;
+    --warn-bg:#2a1e14; --warn-bd:#f6ad55;
+    --key-bg:#141a2a; --key-bd:#7c9eff;
+  }
+  *{box-sizing:border-box;}
+  body{background:var(--bg); color:var(--text); font-family:'Segoe UI',Tahoma,sans-serif; line-height:1.7; margin:0; padding:24px 12px;}
+  .wrap{max-width:840px; margin:0 auto;}
+  h1.title{font-size:1.5rem; text-align:center; margin-bottom:4px;}
+  p.subtitle{text-align:center; color:var(--sub); margin-top:0; margin-bottom:28px; font-size:0.92rem;}
+  .lesson-header{display:flex; align-items:center; gap:10px; margin:34px 0 12px; padding-bottom:6px; border-bottom:2px solid var(--border);}
+  .lesson-num{font-weight:700; font-size:0.8rem; padding:4px 12px; border-radius:20px; background:var(--accent); color:#0f1117; white-space:nowrap;}
+  .lesson-title{font-size:1.08rem; font-weight:700;}
+  .card{background:var(--card); border:1px solid var(--border); border-radius:12px; padding:16px 20px; margin-bottom:14px;}
+  .body-text{font-size:0.93rem; margin-bottom:8px;}
+  .key-points{background:var(--key-bg); border-left:4px solid var(--key-bd); border-radius:6px; padding:10px 14px; margin:8px 0; font-size:0.88rem;}
+  .key-points strong{color:var(--accent);}
+  .key-points ul{margin:6px 0 0; padding-left:20px;} .key-points li{margin-bottom:3px;}
+  .warning{background:var(--warn-bg); border-left:4px solid var(--warn-bd); border-radius:6px; padding:10px 14px; margin:8px 0; font-size:0.88rem;}
+  .warning strong{color:var(--warn-bd);}
+  code{background:#1e2330; padding:1px 6px; border-radius:4px; font-size:0.85em; color:#9ae6b4;}
+  table.mini{width:100%; border-collapse:collapse; font-size:0.82rem; margin:8px 0;}
+  table.mini th, table.mini td{border:1px solid var(--border); padding:5px 7px; text-align:left;}
+  table.mini th{background:#1a1f2c; color:var(--accent);}
+  .recap-box{margin-top:36px; padding:20px; border-radius:12px; background:linear-gradient(135deg,#1a1f2e,#141824); border:1px solid var(--accent);}
+  .recap-box h2{margin-top:0; font-size:1.05rem; color:var(--accent);}
+  .recap-box ol{padding-left:20px; font-size:0.87rem;} .recap-box li{margin-bottom:5px;}
+  .footer-note{text-align:center; color:var(--sub); font-size:0.78rem; margin-top:30px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1 class="title">🤖 Meet Your Personal AI Employee (OpenClaw)</h1>
+  <p class="subtitle">Roman Urdu Notes · Deep Dive Chapter 56 · 16 Lessons · The AI Agent Factory</p>
+
+  <div class="card">
+    <p class="body-text">OpenClaw open-source project hai jo "AI Employee" concept prove kar chuka — fastest-growing open-source project, 350,000+ GitHub stars, Jensen Huang ne GTC 2026 mein "next ChatGPT" kaha. Ye poora chapter 16 lessons mein aap ko ek working AI Employee deta hai jo WhatsApp pe reply karta hai, tools use karta hai, web browse karta hai, voice mein bolta hai, apne schedule pe chalta hai, aur security gates ke peeche kaam karta hai.</p>
+  </div>
+
+  <!-- LESSON 1 -->
+  <div class="lesson-header"><span class="lesson-num">Lesson 1</span><span class="lesson-title">The AI Employee Moment</span></div>
+  <div class="card">
+    <p class="body-text">Chatbot = restaurant (har visit zero se shuru). Personal AI Employee = personal cook jo ghar mein rehti hai, khud fridge check karti hai, sab kuch yaad rakhti hai.</p>
+    <div class="key-points">
+      <strong>6 Dimensions of an AI Employee:</strong>
+      <ul>
+        <li><b>Multi-channel</b> — WhatsApp, Telegram, Discord, sab ek sath, same memory</li>
+        <li><b>Always-on</b> — daemon ki tarah 24/7 background mein chalta hai</li>
+        <li><b>Proactive</b> — heartbeats + cron jobs se khud act karta hai</li>
+        <li><b>Extensible</b> — plugins, skills, MCP servers se naye abilities</li>
+        <li><b>Multi-agent</b> — ek gateway ke peeche multiple specialized agents</li>
+        <li><b>Ownership</b> — sab se important: aap ke machine pe, aap ka data, aap ke rules (Salesforce jaisi enterprise tools pehli 5 rakhti hain lekin ownership nahi)</li>
+      </ul>
+      <strong>Agent OS Mental Model:</strong>
+      <ul>
+        <li>Gateway = Kernel | Workspace files = Firmware | Plugins = Device drivers | Sessions = Process memory</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LESSON 2 -->
+  <div class="lesson-header"><span class="lesson-num">Lesson 2</span><span class="lesson-title">Install & Connect Your Employee</span></div>
+  <div class="card">
+    <div class="key-points">
+      <strong>Universal Setup Pattern (5 steps):</strong>
+      <ul>
+        <li>Install runtime → Configure intelligence (LLM) → Connect I/O (channel) → Verify → Secure</li>
+      </ul>
+      <strong>Key Concepts:</strong>
+      <ul>
+        <li><b>The Crash Loop:</b> agar <code>gateway.mode</code> config nahi hui, gateway crash-loop karta hai — fix: <code>openclaw config set gateway.mode local</code></li>
+        <li><b>Auth Cache Gotcha:</b> credentials <code>auth-profiles.json</code> mein cache hoti hain — ye env variables se bhi priority leta hai. Fresh key kaam na kare to cache file delete karo</li>
+        <li><b>DM Policy:</b> Pairing (default, safe) → Allowlist → Open (risky) → Disabled</li>
+        <li><b>The Activation Dance</b> (core pattern, baar baar aata hai): Bundled plugin exists → Disabled by default → Enable → Configure → Restart</li>
+        <li>Groups har ek ki apni isolated session hoti hai — MEMORY.md sirf main DM mein loads hoti hai, groups mein nahi</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LESSON 3 -->
+  <div class="lesson-header"><span class="lesson-num">Lesson 3</span><span class="lesson-title">Delegate Real Work</span></div>
+  <div class="card">
+    <div class="key-points">
+      <strong>The Agent Loop (5 steps):</strong>
+      <ul>
+        <li>Intake → Context Assembly → Model Inference → Tool Execution → Reply & Persist</li>
+        <li>Knowledge-only question → step 4 skip ho jata hai (no tool badge)</li>
+        <li>File/machine task → <code>exec</code> tool badge. Web task → <code>web_search</code> badge</li>
+      </ul>
+      <strong>Tool Profiles (Knowledge vs Access):</strong>
+      <ul>
+        <li>Model hamesha "janta" hai kaise file list karni hai — profile decide karta hai wo "kar" sakta hai ya nahi</li>
+        <li><b>coding</b> (default) — file I/O, exec, sessions, memory | <b>messaging</b> — sirf messaging tools, exec/files disabled | <b>minimal</b> — almost kuch nahi | <b>full</b> — unrestricted</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LESSON 4 -->
+  <div class="lesson-header"><span class="lesson-num">Lesson 4</span><span class="lesson-title">Customize Your Employee's Brain</span></div>
+  <div class="card">
+    <div class="key-points">
+      <strong>7 Workspace Files (session start pe load hoti hain):</strong>
+      <ul>
+        <li>SOUL.md (voice/style) · IDENTITY.md (naam) · AGENTS.md (operating rules) · TOOLS.md (tool guidance) · USER.md (aap ke baare mein) · HEARTBEAT.md (periodic checklist) · MEMORY.md (curated memory, sirf main session)</li>
+        <li>BOOT.md (har restart pe) aur BOOTSTRAP.md (sirf first run, phir delete) — special lifecycle</li>
+      </ul>
+      <strong>Session Caching — Sab se Important Concept:</strong>
+      <ul>
+        <li>Files disk pe edit karo → session abhi bhi <b>cached snapshot</b> use karta hai → <code>/reset</code> chalao → <code>/context list</code> se verify karo → tab jaake naya behavior aata hai</li>
+        <li>Edit → /reset → /context list → Test — ye order hamesha follow karo</li>
+      </ul>
+      <strong>Emma's Rule (Token Economics):</strong>
+      <ul>
+        <li>Har extra instruction token cost karti hai har message pe — <b>tumhare diye gaye exam question ka exact concept</b></li>
+        <li>Test: "kya is line ke bina agent ka behavior different hota?" Agar nahi, delete karo</li>
+        <li>"Be helpful" jaisi lines useless hain (model already helpful hai) — "Be direct, match length to complexity" jaisi lines direction deti hain</li>
+      </ul>
+    </div>
+    <div class="warning"><strong>⚠️ TOOLS.md tool access control NAHI karta</strong> — sirf guidance notes hain. Tool access sirf Tool Profiles se control hota hai.</div>
+  </div>
+
+  <!-- LESSON 5 -->
+  <div class="lesson-header"><span class="lesson-num">Lesson 5</span><span class="lesson-title">Memory & Commands</span></div>
+  <div class="card">
+    <div class="key-points">
+      <strong>2 Memory Locations:</strong>
+      <ul>
+        <li><b>MEMORY.md</b> — curated, permanent, har session load hoti hai</li>
+        <li><b>memory/YYYY-MM-DD.md</b> — daily logs, sirf aaj+kal load, purani <code>memory_search</code>/<code>memory_get</code> se milti hain</li>
+      </ul>
+      <strong>3 Paths to MEMORY.md:</strong>
+      <ul>
+        <li>1. Manual ("Save in memory:") | 2. Compaction memory flush (lambi conversation summarize hone se pehle) | 3. Dreaming (opt-in scheduled sweep, Light→REM→Deep phases, sirf Deep promote karti hai)</li>
+      </ul>
+      <strong>Verify, Don't Trust:</strong>
+      <ul>
+        <li>"Remember this" se sirf verbal ack milta hai; "<b>Save in memory:</b>" se asal file write hoti hai. Dashboard tool badge check karo</li>
+      </ul>
+      <strong>Slash Commands:</strong>
+      <ul>
+        <li>Gateway se intercept hote hain, model tak nahi pohanchte — zero tokens, instant. (<code>/help</code>, <code>/status</code>, <code>/reset</code>, <code>/compact</code>)</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LESSON 6 -->
+  <div class="lesson-header"><span class="lesson-num">Lesson 6</span><span class="lesson-title">Install & Author Agent Skills</span></div>
+  <div class="card">
+    <div class="key-points">
+      <strong>Skill = Playbook (Laminated Shelf Analogy):</strong>
+      <ul>
+        <li>Agent har turn sirf spines (name+description) parhta hai; body sirf match hone pe khulti hai — <b>Progressive Disclosure</b></li>
+        <li>Discovery (name+desc, ~24 tokens/skill) → Activation (match hone pe body load) → Execution</li>
+      </ul>
+      <strong>Cross-Runtime:</strong>
+      <ul>
+        <li>Ek SKILL.md OpenClaw, Claude Code, OpenCode, Cursor, 50+ runtimes mein chalta hai — spec Anthropic ne banayi</li>
+        <li>2 Registries: <b>skills.sh</b> (broad, cross-runtime) aur <b>ClawHub</b> (OpenClaw-curated, pre-scanned)</li>
+      </ul>
+      <strong>Six-Tier Precedence:</strong>
+      <ul>
+        <li>Workspace skills (tier 1) > Global (tier 4) > Bundled — workspace hamesha override karta hai</li>
+      </ul>
+      <strong>Skill Workshop:</strong>
+      <ul>
+        <li>Corrections (jaise "next time...") ko automatically SKILL.md proposal mein badalta hai — pending → approve → durable skill</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LESSON 7 -->
+  <div class="lesson-header"><span class="lesson-num">Lesson 7</span><span class="lesson-title">Connect External Tools (MCP)</span></div>
+  <div class="card">
+    <div class="key-points">
+      <strong>MCP Server = No-Code External Access:</strong>
+      <ul>
+        <li>2 commands: <code>openclaw config set mcp.servers.time '{...}'</code> + <code>gateway restart</code> — naye tools mil jate hain, koi code nahi</li>
+      </ul>
+      <strong>⚠️ Silent Failure — Sab se Counterintuitive Behavior:</strong>
+      <ul>
+        <li>MCP fail ho to chat mein <b>koi error nahi</b> aata — agent training data se jawab deta hai, bilkul normal lagta hai</li>
+        <li>Sirf gateway log check karne se pata chalta hai: <code>openclaw logs --follow</code></li>
+      </ul>
+      <strong>2 Config Levels:</strong> Gateway-level (sab agents share karte hain) vs Workspace-level (ek hi agent ko scoped)</li>
+      <strong>3 Transports:</strong> stdio (local process), SSE (remote, default for URL), streamable-http (remote streaming)</li>
+    </div>
+  </div>
+
+  <!-- LESSON 8 -->
+  <div class="lesson-header"><span class="lesson-num">Lesson 8</span><span class="lesson-title">Plugins, Bundles & The Decision Tree</span></div>
+  <div class="card">
+    <div class="key-points">
+      <strong>Bara Reveal:</strong> WhatsApp, Google, sab channels/model-providers <b>plugins hi hain</b> (native, TypeScript, in-process) — Lesson 2 se hi use kar rahe thay bina naam jaane.</li>
+      <strong>2 Plugin Formats:</strong>
+      <ul>
+        <li><b>Native</b> (<code>openclaw</code> format) — TypeScript, gateway ke andar chalta hai — channels, model providers, voice</li>
+        <li><b>Bundle</b> (<code>.claude-plugin/</code> format) — sirf files, no code, Claude-compatible — domain workflows (marketing, finance)</li>
+      </ul>
+      <strong>The Decision Tree (Escalation Path):</strong>
+      <ul>
+        <li>Skill (knowledge, no code) → MCP server (external access, JSON) → Bundle plugin (no-code capability) → Native plugin (gateway feature, TypeScript)</li>
+        <li>Zyada tar zarooratein Skills hi hain; native plugins platform developers ke liye hain</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LESSON 9 -->
+  <div class="lesson-header"><span class="lesson-num">Lesson 9</span><span class="lesson-title">Make It Proactive</span></div>
+  <div class="card">
+    <p class="body-text"><b>Ye line hai:</b> is lesson se pehle chatbot-with-features tha, is ke baad Personal AI Employee ban jata hai.</p>
+    <div class="key-points">
+      <strong>⚠️ Heartbeat vs Cron — tumhare exam question ka exact concept:</strong>
+      <ul>
+        <li><b>Heartbeat</b> = interval pe fire hoti hai (approximate, jaise "har 30 minute"), <b>exact clock time nahi</b>. Batch checks, low cost, HEARTBEAT_OK se silent ho sakti hai</li>
+        <li><b>Cron</b> = exact time pe fire hoti hai (9:00 AM sharp). Precise delivery ke liye</li>
+        <li>Agar kisi ko exact 7am chahiye, heartbeat (interval-based) galat tool hai — cron sahi hai, chahe interval 30min ho ya kam</li>
+      </ul>
+      <strong>Cost Math:</strong>
+      <ul>
+        <li>5 separate cron jobs (30-min) = 240 turns/day. 1 heartbeat + 5 checklist items = 48 turns/day. <b>80% savings</b></li>
+      </ul>
+      <strong>HEARTBEAT_OK Suppression:</strong>
+      <ul>
+        <li>Agent "HEARTBEAT_OK" token reply kare (300 chars se kam) to gateway message drop kar deta hai — koi notification nahi</li>
+      </ul>
+      <strong>Quiet Hours — Defense in Depth:</strong>
+      <ul>
+        <li>Level 1: HEARTBEAT.md mein prompt-level instruction (model "should" follow kare)</li>
+        <li>Level 2: <code>activeHours</code> config — infrastructure-level, heartbeat window ke bahar chalta hi nahi (model call hi nahi hoti)</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LESSON 10 -->
+  <div class="lesson-header"><span class="lesson-num">Lesson 10</span><span class="lesson-title">Give It a Voice</span></div>
+  <div class="card">
+    <div class="key-points">
+      <strong>4 Bundled TTS Providers:</strong> Microsoft Edge (free, no key) · OpenAI · ElevenLabs · MiniMax — sab Opus/OGG format mein, WhatsApp voice notes ki tarah</li>
+      <strong>4 TTS Modes:</strong>
+      <ul>
+        <li><code>off</code> — text only | <code>always</code> — har reply audio (annoying, sirf pipeline test ke liye) | <code>inbound</code> — customer ki modality match karta hai (safe production default) | <code>tagged</code> — agent khud decide karta hai <code>[[tts]]</code> tag se (best UX, SOUL.md instructions chahiye)</li>
+      </ul>
+      <strong>1,500-character limit:</strong> is se lambi reply auto-summarize ya skip ho jati hai</li>
+    </div>
+  </div>
+
+  <!-- LESSON 11 -->
+  <div class="lesson-header"><span class="lesson-num">Lesson 11</span><span class="lesson-title">Add a Second Agent</span></div>
+  <div class="card">
+    <div class="key-points">
+      <strong>The Split:</strong>
+      <ul>
+        <li><b>Gateway config</b> (plugins, TTS, model) — <i>shared</i> across sab agents</li>
+        <li><b>Workspace config</b> (SOUL.md, skills, MCP) — <i>per-agent</i>, independent</li>
+      </ul>
+      <strong>Session Cache Rule:</strong> Identity/routing changes sirf naye sessions pe apply hoti hain, existing conversation pe nahi — <code>/new</code> chahiye</li>
+      <strong>Routing:</strong> Same WhatsApp number pe multiple agents ho sakte hain — channel-wide binding ya per-sender binding (config file mein <code>bindings</code> array). Unmatched messages hamesha <code>main</code> pe fallback hoti hain</li>
+    </div>
+  </div>
+
+  <!-- LESSON 12 -->
+  <div class="lesson-header"><span class="lesson-num">Lesson 12</span><span class="lesson-title">Connecting Google Workspace</span></div>
+  <div class="card">
+    <p class="body-text">Ye <b>turning point</b> hai — pehle agent apna hi banaya hua data use karta tha, ab asal inbox/calendar/Drive touch karta hai.</p>
+    <div class="key-points">
+      <strong>gog CLI:</strong> Gmail, Calendar, Drive (aur baaki Google services) ko bridge karta hai — OAuth setup ek dafa, phir subcommands</li>
+      <strong>Least Privilege:</strong>
+      <ul>
+        <li><code>--readonly</code> flag se agent sirf parh sakta hai, likh/send nahi kar sakta</li>
+        <li><b>No-send guard:</b> <code>gog config no-send set</code> — OAuth full ho tab bhi agent email send nahi kar sakta, sirf draft bana sakta hai (2-layer defense: OAuth scope + binary-level guard)</li>
+      </ul>
+      <strong>⚠️ Read-only Gmail bhi khatarnak hai</strong> — agent password-resets, financial statements sab dekh sakta hai, sirf send nahi kar sakta</li>
+      <strong>Secrets Audit:</strong> <code>openclaw secrets audit</code> plaintext credentials check karta hai</li>
+    </div>
+  </div>
+
+  <!-- LESSON 13 -->
+  <div class="lesson-header"><span class="lesson-num">Lesson 13</span><span class="lesson-title">Orchestrate Other Agents</span></div>
+  <div class="card">
+    <div class="key-points">
+      <strong>⚠️ Model hi Weakest Link Hai:</strong>
+      <ul>
+        <li>Free-tier models <code>sessions_spawn</code> tool ko <b>hallucinate karke ignore</b> karte hain — fake permission errors invent karte hain</li>
+        <li>Fix: session clear karo, direct/persistent prompt do ("Use sessions_spawn now")</li>
+      </ul>
+      <strong>Two-Layer Concurrency Model:</strong>
+      <ul>
+        <li><b>Session Lane</b> (per-customer) — sequential, order guarantee ke liye</li>
+        <li><b>Global Lane</b> (shared) — <code>maxConcurrent</code> default 4, isse zyada queue hoti hai</li>
+        <li>7 customers, maxConcurrent=4 → 4 turant, baaki 3 ~5 second wait (5 second processing time farz karte hue)</li>
+      </ul>
+      <strong>ACP (Agent Client Protocol):</strong> WhatsApp se Claude Code control karna — <code>/acp spawn claude --bind here</code>, phir <code>/acp steer</code></li>
+    </div>
+  </div>
+
+  <!-- LESSON 14 -->
+  <div class="lesson-header"><span class="lesson-num">Lesson 14</span><span class="lesson-title">Gate Your Agent's Tools</span></div>
+  <div class="card">
+    <div class="key-points">
+      <strong>Three-Tier Safety Model (Tier 1 aur 2):</strong>
+      <ul>
+        <li><b>Tier 1 — Tool Profiles:</b> binary, in-process (coding/messaging/minimal)</li>
+        <li><b>Tier 2 — Plugin Hooks (requireApproval):</b> sensitive operations ke liye human sign-off. Agent shell command chalana chahe → operator ko WhatsApp pe approval prompt aata hai (allow-once/allow-always/deny)</li>
+      </ul>
+      <strong>Constraint-Driven Specification:</strong> code khud nahi likhte, constraints likh kar agent ko dete hain jo code banata hai</li>
+      <strong>⚠️ Constraint 5 — MCP tools before_tool_call hooks ko bypass kar dete hain</strong> — MCP servers ko khud apni security banani parti hai</li>
+    </div>
+  </div>
+
+  <!-- LESSON 15 -->
+  <div class="lesson-header"><span class="lesson-num">Lesson 15</span><span class="lesson-title">Deploy to Production</span></div>
+  <div class="card">
+    <div class="key-points">
+      <strong>3 Deployment Paths:</strong> Managed (easiest, Alibaba pre-installed) | VPS Native (Lesson 2 wale hi commands, server pe) | VPS Docker (agar pehle se Docker Compose fleet ho)</li>
+      <strong>Security Model:</strong>
+      <ul>
+        <li>Gateway <code>127.0.0.1</code> pe bind hota hai (public se access nahi) + SSH tunnel encryption + gateway token auth — teen cheezein reverse-proxy/TLS/API-gateway ki jagah lete hain</li>
+      </ul>
+      <strong>Production Hardening Checklist:</strong>
+      <ul>
+        <li><code>dmPolicy: allowlist</code> (pairing/open nahi) | <code>groupPolicy: allowlist</code> | credentials <code>chmod 700</code> | tool profile messaging/minimal | log redaction on</li>
+      </ul>
+      <strong>Cost:</strong> $5/mo VPS + $50-100/mo model provider ≈ $66-117/month total; asal optimization tokens kam karna hai, hardware nahi</li>
+    </div>
+  </div>
+
+  <!-- LESSON 16 -->
+  <div class="lesson-header"><span class="lesson-num">Lesson 16</span><span class="lesson-title">Isolate with NemoClaw</span></div>
+  <div class="card">
+    <p class="body-text"><b>Promises vs Physics:</b> Docker Compose mein agent rules "follow karne ka promise" karta hai (in-process). NemoClaw mein agent physically rules break <b>nahi kar sakta</b> (out-of-process, kernel-level).</p>
+    <div class="key-points">
+      <strong>4-Pod Architecture:</strong>
+      <ul>
+        <li><b>Gateway</b> (routing, no keys, no agent) | <b>Sandbox</b> (agent runtime, <b>no API keys</b>) | <b>Privacy Router</b> (API keys yahan hain, agent yahan nahi) | <b>Policy Engine</b> (Landlock/seccomp/netns enforcement)</li>
+      </ul>
+      <strong>Privacy Router — Core Insight:</strong>
+      <ul>
+        <li>Agent <code>inference.local</code> ko call karta hai <b>bina credentials ke</b> — router asal key add kar ke provider ko forward karta hai, response se auth headers strip kar deta hai. Agent kabhi apni API key nahi dekhta</li>
+        <li>Full sandbox compromise ho jaye tab bhi attacker keys nahi chura sakta — kyunke wo wahan hain hi nahi</li>
+      </ul>
+      <strong>Tier 3 complete karta hai:</strong> Tool Profiles (T1) → Approval Hooks (T2) → NemoClaw Sandbox (T3, kernel-level isolation)</li>
+      <strong>Upgrade kab karein:</strong> scale ka masla nahi, <b>trust boundary</b> ka hai — paying customers, doosra operator, ya compliance audit aaye to $10/month extra worth hai</li>
+    </div>
+    <div class="warning"><strong>⚠️ Alpha Reality:</strong> NemoClaw v0.1.0 hai — crash recovery manual hai, image caching nahi hai, docs mein gaps hain. Sifarish: pehle Docker Compose se shuru karo, jab pehla customer API-key security poochay tab NemoClaw pe upgrade karo.</div>
+  </div>
+
+  <div class="recap-box">
+    <h2>📝 One-Line Recap — Sab 16 Lessons</h2>
+    <ol>
+      <li>6 dimensions define karte hain AI Employee: multi-channel, always-on, proactive, extensible, multi-agent, ownership</li>
+      <li>Universal setup: Install → Configure → Connect → Verify → Secure. Crash loop fix: gateway.mode set karo</li>
+      <li>Agent Loop 5 steps; Tool Profiles control karte hain kya "kar" sakta hai, "jaanta" kya hai wo alag hai</li>
+      <li>7 workspace files session start pe load; session caching ka matlab edit + /reset + /context list; Emma's Rule token economics</li>
+      <li>MEMORY.md (curated) vs daily logs; 3 paths to memory; slash commands zero-token instant</li>
+      <li>Skills = playbooks, progressive disclosure, cross-runtime spec, six-tier precedence, Skill Workshop auto-learns</li>
+      <li>MCP servers external access dete hain; silent failure sab se counterintuitive behavior; log hi truth hai</li>
+      <li>Channels/providers bhi plugins hain; native (code) vs bundle (no-code); decision tree escalation path</li>
+      <li>Heartbeat = interval-based batch check; Cron = exact-time delivery; 80% cost savings; HEARTBEAT_OK suppression; activeHours defense-in-depth</li>
+      <li>TTS 4 modes; inbound safe default; tagged best UX; 1500-char limit</li>
+      <li>Gateway config shared, workspace config per-agent; session cache pe identity changes apply hoti hain; routing/fallback</li>
+      <li>gog se Google Workspace connect; least privilege + no-send guard; read-only bhi risky hai</li>
+      <li>Model hi weakest link orchestration mein; two-layer concurrency (session lane + global lane); ACP se Claude Code control</li>
+      <li>Tier 2 — plugin hooks requireApproval se human-in-loop; MCP tools hooks bypass kar dete hain</li>
+      <li>3 deployment paths; loopback bind + SSH tunnel security; hardening checklist</li>
+      <li>NemoClaw 4-pod: keys sirf Privacy Router mein, sandbox mein kabhi nahi; promises vs physics; trust-boundary decision</li>
+    </ol>
+  </div>
+
+  <p class="footer-note">Built for Ismail Ahmed Shah · GIAIC Exam Prep · 2026</p>
+</div>
+</body>
+</html>
