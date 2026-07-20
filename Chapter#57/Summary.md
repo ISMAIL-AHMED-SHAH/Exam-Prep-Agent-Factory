@@ -40,6 +40,13 @@ After completing this chapter, you should be able to:
 - [Quick Revision](#-quick-revision)
 
 ---
+> [!NOTE]
+> 📄 **Reference PDF**
+>
+> This lesson is based on the official MCP Blueprint.
+>
+> **Download / View PDF:** [📥 The MCP Blueprint](PDFs/the-mcp-blueprint.pdf)
+---
 
 # Lesson 1 — Your Agent Needs Hands
 
