@@ -26,7 +26,7 @@ By completing this quiz, you should be able to:
 ## 🚀 Start the Quiz
 
 👉 **Interactive Quiz:**  
-**https://claude.ai/public/artifacts/6b72efe6-787f-48c4-a8e1-e11b15a8ad57**
+**https://claude.ai/public/artifacts/5b17c08c-aabd-417d-ac8e-1a7da9355dc3**
 
 > [!TIP]
 > For the best learning experience, complete the quiz first and then review any incorrect answers using the corresponding chapter notes.
@@ -34,7 +34,7 @@ By completing this quiz, you should be able to:
 ---
 
 👉 **Interactive Quiz:**  
-**[Start the Chapter Quiz](https://claude.ai/public/artifacts/6b72efe6-787f-48c4-a8e1-e11b15a8ad57)**
+**[Start the Chapter Quiz](https://claude.ai/public/artifacts/5b17c08c-aabd-417d-ac8e-1a7da9355dc3)**
 
 ---
 
