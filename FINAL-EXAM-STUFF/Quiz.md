@@ -26,7 +26,7 @@ By completing this quiz, you should be able to:
 ## 🚀 Start the Quiz
 
 👉 **Interactive Quiz:**  
-**https://claude.ai/public/artifacts/02dec29a-fb00-439f-9537-a646d27a22fb**
+**https://final-exam-quiz.netlify.app/**
 
 > [!TIP]
 > For the best learning experience, complete the quiz first and then review any incorrect answers using the corresponding chapter notes.
