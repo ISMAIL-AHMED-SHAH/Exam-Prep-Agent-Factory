@@ -24,10 +24,10 @@ By completing this quiz, you should be able to:
 ---
 
 ## 🚀 Start the Quiz
-👉 **Interactive Quiz:**  
+👉 **Interactive Quiz:**  (Claude Link)  
 **[Start the Chapter Quiz](https://claude.ai/public/artifacts/02dec29a-fb00-439f-9537-a646d27a22fb)**
 ---
-👉 **Interactive Quiz: (Claude Link)**  
+👉 **Interactive Quiz:**  
 **https://final-exam-quiz.netlify.app/**
 
 > [!TIP]
