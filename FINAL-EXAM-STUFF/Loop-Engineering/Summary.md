@@ -3,7 +3,7 @@
 > [!NOTE]
 > **Final Exam Marathon** • **Advanced Agentic Coding** • **Complete Pass**
 >
-> Yeh notes ab **Concepts 1–15 (Part 1–6)** + **Interludes** fully cover karte hain.
+> **Concepts 1–15 (Part 1–6)** + **Interludes**
 
 ---
 
