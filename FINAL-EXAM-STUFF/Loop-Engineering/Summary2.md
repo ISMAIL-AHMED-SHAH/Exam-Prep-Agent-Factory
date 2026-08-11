@@ -1,7 +1,7 @@
 # 🔁 Loop Engineering — Crash Course
 
 > Final Exam Marathon • Part 1 of Advanced Agentic Coding
-> ✅ **Complete Pass:** Yeh notes ab sare 15 Concepts (Part 1–6) cover karte hain.
+> ✅ 15 Concepts (Part 1–6)
 
 ## 📖 Core Metaphor
 Loop = **Heartbeat** (kab chalta hai) + **Body** (kya kaam karta hai) + **Spine** (kya yaad rakhta hai). Yeh teeno mil kar ek "agent loop" banate hain jo bina insaan ke baar baar prompt kiye khud chalta rehta hai.
