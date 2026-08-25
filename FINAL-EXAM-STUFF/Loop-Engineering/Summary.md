@@ -1,4 +1,4 @@
-# 🔁 Loop Engineering — Crash Course
+# 🔁 Loop Engineering - Crash Course
 
 > [!NOTE]
 > **Final Exam Marathon** • **Advanced Agentic Coding** • **Complete Pass**
