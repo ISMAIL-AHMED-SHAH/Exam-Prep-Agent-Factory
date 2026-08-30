@@ -247,3 +247,16 @@ flowchart LR
 
 **Delegation → Description → Discernment → Diligence**
 
+---
+
+<div align="center">
+
+# AI Fluency: A Crash Course
+
+**GIAIC · The AI Agent Factory · Exam Preparation · Claude Certified Associate — Foundations · 2026**
+
+**Built By Ismail Ahmed Shah | GIAIC 2026**
+
+Made with ❤️ for the AI Builders Community
+
+</div>
