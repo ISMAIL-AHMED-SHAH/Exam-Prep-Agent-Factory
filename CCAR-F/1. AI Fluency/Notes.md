@@ -2,7 +2,7 @@
 
 > [!NOTE]
 > **Source:** [agentfactory.panaversity.org/docs/ai-fluency-crash-course](https://agentfactory.panaversity.org/docs/ai-fluency-crash-course)
-> **Reading time:** ~30 minutes · **Track:** Claude Certified Associate — Foundations
+> · **Track:** Claude Certified Associate — Foundations
 
 ---
 
