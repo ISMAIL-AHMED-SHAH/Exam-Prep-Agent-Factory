@@ -1,6 +1,6 @@
 # 🧠 Claude Certified Associate — Exam Prep
 
-> **Foundations Track · Roman Urdu Notes + Scenario-Based MCQs · 154 MCQs across 5 Chapters**
+> **Foundations Track · Short/Easy Notes + Scenario-Based MCQs · 154 MCQs across 5 Chapters**
 
 A self-built study system for the **Claude Certified Associate — Foundations** exam: chapter-by-chapter Roman Urdu notes and a single interactive practice quiz covering every chapter.
 
