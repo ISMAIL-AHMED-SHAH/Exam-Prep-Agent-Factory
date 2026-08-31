@@ -40,13 +40,13 @@ Roman Urdu notes for each chapter — Table of Contents, GitHub-style callouts (
 
 | # | Chapter | Notes File | Source |
 | ---: | --- | --- | --- |
-| 1 | 🧭 AI Fluency — The 4Ds | [`01-ai-fluency-4ds-notes.md`](./01-ai-fluency-4ds-notes.md) | [agentfactory.panaversity.org](https://agentfactory.panaversity.org/docs/ai-fluency-crash-course) |
-| 2 | 💬 Claude & ChatGPT 101 | [`02-claude-chatgpt-101-notes.md`](./02-claude-chatgpt-101-notes.md) | [agentfactory.panaversity.org](https://agentfactory.panaversity.org/docs/claude-chatgpt-101-crash-course) |
-| 3 | 🔌 Skills & Connectors | [`03-skills-connectors-notes.md`](./03-skills-connectors-notes.md) | [agentfactory.panaversity.org](https://agentfactory.panaversity.org/docs/skills-connectors-crash-course) |
-| 4 | 🌐 General Agents on the Web | [`04-general-agents-web-notes.md`](./04-general-agents-web-notes.md) | [agentfactory.panaversity.org](https://agentfactory.panaversity.org/docs/general-agents-web-crash-course) |
-| 5 | 🤝 Cowork & OpenWork | [`05-cowork-openwork-notes.md`](./05-cowork-openwork-notes.md) | [agentfactory.panaversity.org](https://agentfactory.panaversity.org/docs/cowork-crash-course) |
+| 1 | 🧭 AI Fluency — The 4Ds | [`Notes.md`](./1.%20AI%20Fluency/Notes.md) | [agentfactory.panaversity.org](https://agentfactory.panaversity.org/docs/ai-fluency-crash-course) |
+| 2 | 💬 Claude & ChatGPT 101 | [`Notes.md`](./2.%20Claude%20and%20ChatGPT%20101/Notes.md) | [agentfactory.panaversity.org](https://agentfactory.panaversity.org/docs/claude-chatgpt-101-crash-course) |
+| 3 | 🔌 Skills & Connectors | [`Notes.md`](./3.%20Skills%20%26%20Connectors/Notes.md) | [agentfactory.panaversity.org](https://agentfactory.panaversity.org/docs/skills-connectors-crash-course) |
+| 4 | 🌐 General Agents on the Web | [`Notes.md`](./4.%20General%20Agents%20on%20the%20Web/Notes.md) | [agentfactory.panaversity.org](https://agentfactory.panaversity.org/docs/general-agents-web-crash-course) |
+| 5 | 🤝 Cowork & OpenWork | [`Notes.md`](./5.%20Cowork%20and%20OpenWork/Notes.md) | [agentfactory.panaversity.org](https://agentfactory.panaversity.org/docs/cowork-crash-course) |
 
-Each notes file ends with images placeholders you can swap for your own screenshots from the source chapter.
+Each notes file ends with image placeholders you can swap for your own screenshots from the source chapter.
 
 ---
 
