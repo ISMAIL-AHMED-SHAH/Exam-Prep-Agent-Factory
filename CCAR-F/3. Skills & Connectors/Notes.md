@@ -2,7 +2,8 @@
 
 > [!NOTE]
 > **Source:** [agentfactory.panaversity.org/docs/skills-connectors-crash-course](https://agentfactory.panaversity.org/docs/skills-connectors-crash-course)
-> **Reading time:** ~30–35 minutes · **Track:** Claude Certified Associate — Foundations
+> 
+> · **Track:** Claude Certified Associate — Foundations
 
 ---
 
