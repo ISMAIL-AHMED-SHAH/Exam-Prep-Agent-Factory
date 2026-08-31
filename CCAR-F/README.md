@@ -8,7 +8,7 @@ A self-built study system for the **Claude Certified Associate — Foundations**
 
 ## 🎯 Practice Quiz
 
-🔗 **[Launch the Claude Certified Associate Practice Quiz](https://claude.ai/public/artifacts/1ade7500-118e-4ad4-8100-12df2e66ab75)**
+🔗 **[Launch the Claude Certified Associate Practice Quiz](https://claude.ai/public/artifacts/d79d6eb9-85ac-40f8-8c5c-bbb5df7da98a)**
 
 ### 📚 Quiz Coverage
 
@@ -67,7 +67,7 @@ Each notes file ends with images placeholders you can swap for your own screensh
 
 ## 🚀 Ready to Test Yourself?
 
-**[👉 Start the Practice Quiz](https://claude.ai/public/artifacts/1ade7500-118e-4ad4-8100-12df2e66ab75)**
+**[👉 Start the Practice Quiz](https://claude.ai/public/artifacts/d79d6eb9-85ac-40f8-8c5c-bbb5df7da98a)**
 
 > *Learn → Practice → Identify gaps → Improve → Repeat.*
 
