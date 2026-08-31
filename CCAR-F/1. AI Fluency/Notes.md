@@ -2,6 +2,7 @@
 
 > [!NOTE]
 > **Source:** [agentfactory.panaversity.org/docs/ai-fluency-crash-course](https://agentfactory.panaversity.org/docs/ai-fluency-crash-course)
+> 
 > · **Track:** Claude Certified Associate — Foundations
 
 ---
