@@ -2,7 +2,8 @@
 
 > [!NOTE]
 > **Source:** [agentfactory.panaversity.org/docs/claude-chatgpt-101-crash-course](https://agentfactory.panaversity.org/docs/claude-chatgpt-101-crash-course)
-> **Reading time:** ~30–35 minutes · **Track:** Claude Certified Associate — Foundations
+> 
+> · **Track:** Claude Certified Associate — Foundations
 
 ---
 
