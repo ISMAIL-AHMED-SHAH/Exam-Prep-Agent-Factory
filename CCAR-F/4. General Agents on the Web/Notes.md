@@ -2,7 +2,8 @@
 
 > [!NOTE]
 > **Source:** [agentfactory.panaversity.org/docs/general-agents-web-crash-course](https://agentfactory.panaversity.org/docs/general-agents-web-crash-course)
-> **Reading time:** ~90 min (core) / ~2 hours (full) · **Track:** Claude Certified Associate — Foundations
+> 
+> · **Track:** Claude Certified Associate — Foundations
 
 ---
 
