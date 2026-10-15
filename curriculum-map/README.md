@@ -15,6 +15,7 @@
 
 [📚 Browse Courses](#-course-library) · [🗺️ Learning Roadmap](#-learning-roadmap) · [🧠 Study Strategy](#-how-to-use-this-repository) · [🌐 Official Source](https://agentfactory.panaversity.org/)
 
+Curated for structured learning, revision, and viva preparation.
 </div>
 
 ---
