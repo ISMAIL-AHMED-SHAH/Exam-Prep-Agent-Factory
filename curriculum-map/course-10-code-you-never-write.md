@@ -1,358 +1,448 @@
-# Course 10: Code You Never Write — Topic Tree
+# 🧠 Course 10 — Code You Never Write
 
-Source: https://agentfactory.panaversity.org/docs/code-you-never-write-crash-course (fetched and read in full, 15 Oct 2026)
+[![Course](https://img.shields.io/badge/Agent_Factory-Course_10-2563eb?style=for-the-badge)](https://agentfactory.panaversity.org/docs/code-you-never-write-crash-course) ![Core concepts](https://img.shields.io/badge/Core_Concepts-13-0891b2?style=for-the-badge) ![Format](https://img.shields.io/badge/Format-Expandable_Topic_Map-7c3aed?style=for-the-badge)
 
-**Heading-level note:** directly under the H1 the page has an H3 subtitle ("Getting AI to do the real, tedious work of your job..."). It is listed as the first main topic, with the opening story beneath it. The four Projects (Money Detective, What's My Grade, Really, The Books Don't Match, Photo Gallery Rescue) are bold lines inside the "🚀 Projects" H2, not headings, so they appear as `[Concept]` nodes. The text between "Prove it in two minutes" and "The four parts, in brief" (prerequisites, "what you need", Quick glossary, 30-minute path) follows no new heading, so it is nested under "Prove it in two minutes".
+> [!IMPORTANT]
+> **Source fidelity:** This is a **curated, condensed interactive study map** built from the topic tree provided in the conversation. It preserves the principal headings, course sequence, major concepts, and `[NOT VERIFIED]` warnings, but **does not reproduce every numbered source node verbatim**. Consult the [course page](https://agentfactory.panaversity.org/docs/code-you-never-write-crash-course) for the complete wording.
 
-Legend: unmarked nodes are actual headings. `[Concept]` = paragraph-, list-, table-, callout- or figure-derived, not a heading. Heading names are verbatim; `[Concept]` labels are condensed from the source wording.
+## 🧭 Learning roadmap
 
-```text
-10. Code You Never Write
-│
-├── 10.1 Getting AI to do the real, tedious work of your job, and trust the result, without writing or reading a single line of code (H3 subtitle directly under the H1)
-│   ├── 10.1.1 Summary: you describe the problem; AI picks the language, writes, runs, and fixes the code; you never read syntax but learn to check; 13 concepts, 80% of real use [Concept]
-│   ├── 10.1.2 Bookkeeper story: two files that should match; one plain-English request; 23 mismatches in a minute; evening of hunting gone [Concept]
-│   ├── 10.1.3 Same move for a teacher with 200 grades, a nurse with a month of logs, a student with badly named files [Concept]
-│   ├── 10.1.4 Code had one gate for seventy years (write it yourself); Python is now open to anyone who can describe a problem clearly [Concept]
-│   ├── 10.1.5 Link to the prompting course: playful code there; dull chores with real stakes here [Concept]
-│   ├── 10.1.6 You are not learning to write code; you are learning to be a good client for code (clear briefs, check measurable results, keep what you paid for) [Concept]
-│   └── 10.1.7 Not reading syntax is the freedom; checking the result is the responsibility [Concept]
-├── 10.2 📚 Teaching Aid
-│   └── 10.2.1 Full presentation link and slideshow embed (Code You Never Write) [NOT VERIFIED: slide content not readable] [Concept]
-├── 10.3 Prove it in two minutes
-│   ├── 10.3.1 Paste an expense list into Claude.ai (or ChatGPT, Gemini): write and run code to total by category and show the code ran [Concept]
-│   ├── 10.3.2 AI writes and runs a program in a language it picks; numbers are computed, not estimated [Concept]
-│   ├── 10.3.3 Second prompt: hand-check the Groceries sum (4,250 + 2,890 + 3,120); seed of Concept 6 [Concept]
-│   ├── 10.3.4 Thirteen concepts make each step deliberate [Concept]
-│   ├── 10.3.5 Builds on three Foundations courses [Concept]
-│   │   ├── 10.3.5.1 What AI Actually Is: mental model of the machine [Concept]
-│   │   ├── 10.3.5.2 AI Prompting in 2026: writing and running code [Concept]
-│   │   ├── 10.3.5.3 Markdown In, HTML Out: briefs are Markdown and reports are HTML [Concept]
-│   │   ├── 10.3.5.4 Tool walkthroughs (Agentic Coding; Cowork & OpenWork) not needed here [Concept]
-│   │   └── 10.3.5.5 Problem Solving with General Agents assumes this page [Concept]
-│   ├── 10.3.6 Haven't read those two? The 60-second version (collapsible) [Concept]
-│   │   ├── 10.3.6.1 From AI Prompting in 2026: AI writes and runs code when asked; the loop of context, options, reaction [Concept]
-│   │   └── 10.3.6.2 From Markdown In, HTML Out: headings and bullets remove guesswork; ask for HTML when a human will read the result [Concept]
-│   ├── 10.3.7 What you need, and what you'll walk away with (collapsible) [Concept]
-│   │   ├── 10.3.7.1 You need [Concept]
-│   │   │   ├── 10.3.7.1.1 One free chat account (Claude.ai requires 18 or older; ChatGPT and Gemini allow 13 and up with parental consent) [Concept]
-│   │   │   ├── 10.3.7.1.2 One real spreadsheet or folder of your own [Concept]
-│   │   │   └── 10.3.7.1.3 Nothing installed (Parts 1 and 2 in the browser) [Concept]
-│   │   ├── 10.3.7.2 Reading takes about an hour; do-this-now boxes add about thirty minutes [Concept]
-│   │   └── 10.3.7.3 By the end you can [Concept]
-│   │       ├── 10.3.7.3.1 Spot a code problem [Concept]
-│   │       ├── 10.3.7.3.2 Write a five-section code brief [Concept]
-│   │       ├── 10.3.7.3.3 Force computation over estimation [Concept]
-│   │       ├── 10.3.7.3.4 Check a result you cannot read [Concept]
-│   │       ├── 10.3.7.3.5 Run scripts safely on real files [Concept]
-│   │       └── 10.3.7.3.6 Keep what you build [Concept]
-│   ├── 10.3.8 Quick glossary (26 entries) [Concept]
-│   │   ├── 10.3.8.1 script [Concept]
-│   │   ├── 10.3.8.2 sandbox [Concept]
-│   │   ├── 10.3.8.3 Python [Concept]
-│   │   ├── 10.3.8.4 brief [Concept]
-│   │   ├── 10.3.8.5 answer problem [Concept]
-│   │   ├── 10.3.8.6 code problem [Concept]
-│   │   ├── 10.3.8.7 Volume, Precision, Repetition, Files [Concept]
-│   │   ├── 10.3.8.8 VPRF [Concept]
-│   │   ├── 10.3.8.9 Rules [Concept]
-│   │   ├── 10.3.8.10 Edge cases [Concept]
-│   │   ├── 10.3.8.11 CSV [Concept]
-│   │   ├── 10.3.8.12 known-answer test [Concept]
-│   │   ├── 10.3.8.13 reality questions [Concept]
-│   │   ├── 10.3.8.14 plain-English replay [Concept]
-│   │   ├── 10.3.8.15 adversarial pass [Concept]
-│   │   ├── 10.3.8.16 cross-model check [Concept]
-│   │   ├── 10.3.8.17 wrong-but-running [Concept]
-│   │   ├── 10.3.8.18 Intent Layer [Concept]
-│   │   ├── 10.3.8.19 surface [Concept]
-│   │   ├── 10.3.8.20 terminal [Concept]
-│   │   ├── 10.3.8.21 agent [Concept]
-│   │   ├── 10.3.8.22 plan-then-approve [Concept]
-│   │   ├── 10.3.8.23 blast radius [Concept]
-│   │   ├── 10.3.8.24 dry run [Concept]
-│   │   ├── 10.3.8.25 Digital FTE [Concept]
-│   │   └── 10.3.8.26 market of one [Concept]
-│   └── 10.3.9 Short on time? The 30-minute path (collapsible): Concepts 3 to 6 with their Do this now boxes; later Part 3, Concept 12, Projects [Concept]
-├── 10.4 The four parts, in brief
-│   ├── 10.4.1 1 The deal: code no longer gated by writing it; four signals tell you when a job needs code [Concept]
-│   ├── 10.4.2 2 Commissioning code: force compute, brief, check work you cannot read, handle errors, keep the script [Concept]
-│   ├── 10.4.3 3 Five surfaces: browser chat, terminal in your folder, desktop app that plans before it acts [Concept]
-│   └── 10.4.4 4 Power, safely held: four rules shrink the cost of a mistake; an honest map of where one-prompt code ends [Concept]
-├── 10.5 Part 1: The deal
-│   ├── 10.5.1 1. Code is no longer gated by coding
-│   │   ├── 10.5.1.1 Old deal: learn to program or do it by hand (script defined; two-week wait for a developer) [Concept]
-│   │   ├── 10.5.1.2 New deal: AI is the developer, you are the client [Concept]
-│   │   ├── 10.5.1.3 Three things grew up together [Concept]
-│   │   │   ├── 10.5.1.3.1 AI writes working code for small, well-described problems [Concept]
-│   │   │   ├── 10.5.1.3.2 AI runs the code itself (sandbox defined; some tools run it on your machine with permission) [Concept]
-│   │   │   └── 10.5.1.3.3 AI repairs the code itself [Concept]
-│   │   ├── 10.5.1.4 If you tried AI for code in 2023, unlearn one thing (callout): the code-block-and-walk-away era is over [Concept]
-│   │   ├── 10.5.1.5 The unit of work: can I describe this [Concept]
-│   │   ├── 10.5.1.6 From the field, six professions (table) [Concept]
-│   │   │   ├── 10.5.1.6.1 Bookkeeper: reconciled 1,400 rows, flagged 23 mismatches [Concept]
-│   │   │   ├── 10.5.1.6.2 Doctor (clinic owner): no-show rates by weekday and hour; Monday 9 a.m. 3 times worse [Concept]
-│   │   │   ├── 10.5.1.6.3 Marketer: merged four exports into one table and chart [Concept]
-│   │   │   ├── 10.5.1.6.4 Teacher: weighted finals, letter grades, comment lines for 200 students [Concept]
-│   │   │   ├── 10.5.1.6.5 Student: renamed 300 files by internal date in under a minute [Concept]
-│   │   │   └── 10.5.1.6.6 Network engineer: daily device health report [Concept]
-│   │   ├── 10.5.1.7 Do this now (1 min): eight students, below 50 and more than 30 days late; three qualify [Concept]
-│   │   └── 10.5.1.8 Stop asking "do I know how to do this"; ask "can I describe what done looks like" [Concept]
-│   ├── 10.5.2 2. What code actually is (the 60-second version)
-│   │   ├── 10.5.2.1 Code: a list of exact instructions a computer follows perfectly at any speed [Concept]
-│   │   ├── 10.5.2.2 Code comes in many languages built for different jobs [Concept]
-│   │   │   ├── 10.5.2.2.1 Python: files, spreadsheets, data, charts, reports; the language AI knows best [Concept]
-│   │   │   └── 10.5.2.2.2 JavaScript and TypeScript: things you click (web tool, game, calculator) [Concept]
-│   │   ├── 10.5.2.3 You never choose the language; the choice follows the output [Concept]
-│   │   ├── 10.5.2.4 Figure: how the AI picks the language (number, file, report vs thing you click) [Concept]
-│   │   ├── 10.5.2.5 A scrap of Python (for each row, add the amount to that category's total); half-reading is all that is asked [Concept]
-│   │   ├── 10.5.2.6 Other languages exist (Go, Rust, SQL); the rule never changes [Concept]
-│   │   ├── 10.5.2.7 Allowed to look at the code, not required (open engine bay is proof work is happening, not proof it is right) [Concept]
-│   │   ├── 10.5.2.8 Code is exact in both directions: computes to the last cent and does the wrong thing perfectly at scale [Concept]
-│   │   ├── 10.5.2.9 Kitchen analogy: "simmer 20 hours" yields charcoal; the brief failed, not the robot; AI can also misread a clear brief [Concept]
-│   │   └── 10.5.2.10 Do this now (1 min): total, average, count above 40 (237, 39.5, three) [Concept]
-│   └── 10.5.3 3. The dividing line: which problems are code problems
-│       ├── 10.5.3.1 One decision before any prompt: a question for the AI's mind or a job for its hands [Concept]
-│       ├── 10.5.3.2 Answer problem vs code problem [Concept]
-│       ├── 10.5.3.3 Four signals; any one is enough [Concept]
-│       │   ├── 10.5.3.3.1 Volume: more items than you would do by hand [Concept]
-│       │   ├── 10.5.3.3.2 Precision: a wrong digit has consequences [Concept]
-│       │   ├── 10.5.3.3.3 Repetition: you will face it again [Concept]
-│       │   └── 10.5.3.3.4 Files: the problem lives in files, not sentences [Concept]
-│       ├── 10.5.3.4 Figure: the dividing line [Concept]
-│       ├── 10.5.3.5 VPRF; no signal means answer problem [Concept]
-│       ├── 10.5.3.6 Run your own week through the filter (table of eight tasks) [Concept]
-│       │   ├── 10.5.3.6.1 Draft a polite email: no [Concept]
-│       │   ├── 10.5.3.6.2 Summarize one contract: no [Concept]
-│       │   ├── 10.5.3.6.3 Which of 80 contracts have a non-standard termination clause: yes (Volume, Files) [Concept]
-│       │   ├── 10.5.3.6.4 Is my business idea good: no [Concept]
-│       │   ├── 10.5.3.6.5 What did I spend on fuel this year: yes (Precision, Files) [Concept]
-│       │   ├── 10.5.3.6.6 Explain a mutual fund: no [Concept]
-│       │   ├── 10.5.3.6.7 Rename vacation photos by date: yes (Volume, Files) [Concept]
-│       │   └── 10.5.3.6.8 Every Monday combine three exports: yes (Repetition) [Concept]
-│       ├── 10.5.3.7 The trap: problems that look like answer problems but fire Precision ("roughly how did sales trend") [Concept]
-│       ├── 10.5.3.8 Which language does each get (collapsible table): Python for number, file, report, renamed folder; JavaScript or TypeScript for things clicked [Concept]
-│       ├── 10.5.3.9 Non-software example: school administrator's fee spreadsheet (eight families listed; real number eleven) [Concept]
-│       └── 10.5.3.10 Do this now (2 min): sort eight tasks into answer and code problems and name the signal [Concept]
-├── 10.6 Part 2: Commissioning code
-│   ├── 10.6.1 Intro: you have decided it is a code problem [Concept]
-│   ├── 10.6.2 4. Make the AI's hands move: automatic vs. explicit
-│   │   ├── 10.6.2.1 AI decides whether to write code from how your prompt sounds; an estimate looks exactly like a computation [Concept]
-│   │   ├── 10.6.2.2 Never leave the decision to the AI on anything that fires Precision [Concept]
-│   │   ├── 10.6.2.3 Three lines to pin above your desk [Concept]
-│   │   │   ├── 10.6.2.3.1 Write and run code to answer this [Concept]
-│   │   │   ├── 10.6.2.3.2 Show me the code you ran [Concept]
-│   │   │   └── 10.6.2.3.3 Before analyzing, tell me the exact row count, column names, and date range [Concept]
-│   │   ├── 10.6.2.4 Line three is the cheapest lie detector [Concept]
-│   │   ├── 10.6.2.5 Say "code", not "Python": you tell the AI to compute, never which language [Concept]
-│   │   ├── 10.6.2.6 How phrasing steers the AI (table) [Concept]
-│   │   │   ├── 10.6.2.6.1 "What does this data show?": glance-based summary [Concept]
-│   │   │   ├── 10.6.2.6.2 "Roughly how did costs trend?": almost always a glance [Concept]
-│   │   │   ├── 10.6.2.6.3 "Write and run code to compute cost by month": code every time [Concept]
-│   │   │   └── 10.6.2.6.4 "Are you running code, or estimating?": the best move when you suspect a glance [Concept]
-│   │   ├── 10.6.2.7 Do not demand code for answer problems [Concept]
-│   │   ├── 10.6.2.8 The tell (callout): no code block, row counts, or "here is what I computed" means an opinion, not an analysis [Concept]
-│   │   └── 10.6.2.9 Do this now (2 min): commute log; eight rows, three columns, March 2025; Bus total 105 [Concept]
-│   ├── 10.6.3 5. Brief the problem, not the program
-│   │   ├── 10.6.3.1 Best code briefs contain no technical language [Concept]
-│   │   ├── 10.6.3.2 Five questions [Concept]
-│   │   │   ├── 10.6.3.2.1 Goal [Concept]
-│   │   │   ├── 10.6.3.2.2 Input [Concept]
-│   │   │   ├── 10.6.3.2.3 Output [Concept]
-│   │   │   ├── 10.6.3.2.4 Rules: limits a stranger would not know [Concept]
-│   │   │   └── 10.6.3.2.5 Edge cases: decisions about imperfect data made in advance [Concept]
-│   │   ├── 10.6.3.3 Figure: the five-section code brief (Rules and Edge cases starred) [Concept]
-│   │   ├── 10.6.3.4 Brief template (Markdown spec) [Concept]
-│   │   ├── 10.6.3.5 Rules is where your professional knowledge lives; every wrong analysis traces to an unstated rule [Concept]
-│   │   ├── 10.6.3.6 Edge cases: decide in advance (skip, list at the end) [Concept]
-│   │   ├── 10.6.3.7 Worked brief, teacher edition: who hasn't turned in the essay (CSV defined) [Concept]
-│   │   │   └── 10.6.3.7.1 Goal, Input (class-list.csv, submissions.csv), Output (HTML page), Rules (name matching, duplicate submissions), Edge cases (unmatched names, unreadable rows) [Concept]
-│   │   ├── 10.6.3.8 Don't know your own edge cases? Ask (callout): have the AI examine the files and report what could be unclear first [Concept]
-│   │   └── 10.6.3.9 Do this now (3 min): messy calories file (kcal, comma, duplicate row, blank date); Rules and Edge cases make the difference [Concept]
-│   ├── 10.6.4 6. Verifying work you cannot read
-│   │   ├── 10.6.4.1 The AI has no truth-checker (What AI Actually Is, Idea 3); with code you can run it [Concept]
-│   │   ├── 10.6.4.2 Skeptic's question: how do you know it is correct if you cannot read it [Concept]
-│   │   ├── 10.6.4.3 Answer: check an expert's results, not their craft; test results against knowledge you already have [Concept]
-│   │   ├── 10.6.4.4 Five checks, rising in effort [Concept]
-│   │   │   ├── 10.6.4.4.1 Known-answer test: run on a part whose answer you know [Concept]
-│   │   │   ├── 10.6.4.4.2 Reality questions: rows in vs rows out; does the biggest customer match [Concept]
-│   │   │   ├── 10.6.4.4.3 Plain-English replay: procedure explained for a colleague; most errors are procedure errors [Concept]
-│   │   │   ├── 10.6.4.4.4 Adversarial pass: ask the AI to attack its own work; score confidence 1 to 10 [Concept]
-│   │   │   └── 10.6.4.4.5 Cross-model check: same brief in a second AI; limit: both read your brief [Concept]
-│   │   ├── 10.6.4.5 Figure: the verification ladder [Concept]
-│   │   ├── 10.6.4.6 Stakes table [Concept]
-│   │   │   ├── 10.6.4.6.1 Personal curiosity: reality questions [Concept]
-│   │   │   ├── 10.6.4.6.2 Work a colleague relies on: known-answer test and plain-English replay [Concept]
-│   │   │   └── 10.6.4.6.3 Money, grades, health, anything signed: all five plus human review [Concept]
-│   │   ├── 10.6.4.7 Non-software example: pharmacist adds a fake 10-unit gap; script finds it plus four real ones [Concept]
-│   │   ├── 10.6.4.8 Uncle Bob (callout): Robert C. Martin posted in July 2026 that he no longer reads agent-written code; he builds extreme constraints (checks) first [Concept]
-│   │   │   ├── 10.6.4.8.1 Mutation testing: break the code on purpose and see whether any test notices [Concept]
-│   │   │   └── 10.6.4.8.2 The pharmacist invented it; yours runs on knowledge he will never have [Concept]
-│   │   ├── 10.6.4.9 The one thing you never skip: never act on a precision-critical number not tested against one answer you independently know [Concept]
-│   │   └── 10.6.4.10 Do this now (2 min): 8,000 + 6,500 + 9,000 = 23,500 [Concept]
-│   ├── 10.6.5 7. When it breaks: errors are dialogue, not failure
-│   │   ├── 10.6.5.1 An error is the computer describing what it needs [Concept]
-│   │   ├── 10.6.5.2 Red-text skill: paste the full error with "diagnose, fix, rerun" [Concept]
-│   │   ├── 10.6.5.3 Surface defined; on local surfaces the AI often sees and fixes the error itself [Concept]
-│   │   ├── 10.6.5.4 Wrong-but-running: report like a symptom (value you expected; ask for row count, date range, first five rows) [Concept]
-│   │   ├── 10.6.5.5 Typical causes: only first sheet read, "1,200" read as text, export stopped halfway [Concept]
-│   │   ├── 10.6.5.6 Three patterns (table) [Concept]
-│   │   │   ├── 10.6.5.6.1 Red text, script stopped: paste full error [Concept]
-│   │   │   ├── 10.6.5.6.2 Runs but number contradicts what you know: symptom and expected value [Concept]
-│   │   │   └── 10.6.5.6.3 Same fix fails three times: stop digging; restate and propose two different approaches; start a clean chat if confused [Concept]
-│   │   ├── 10.6.5.7 Non-software example: marketer's "codec" error fixed in forty seconds [Concept]
-│   │   └── 10.6.5.8 Do this now (2 min): crash on purpose (misspelled Pagse column) and paste the error back [Concept]
-│   └── 10.6.6 8. Keep the script: a solved problem becomes a button
-│       ├── 10.6.6.1 A script written once is something you own forever; stop using AI and start building up with it [Concept]
-│       ├── 10.6.6.2 Three-part habit [Concept]
-│       │   ├── 10.6.6.2.1 Ask for the script as a file (plain-English header: what it does, expected files, rules) [Concept]
-│       │   ├── 10.6.6.2.2 Keep the brief next to the script (Intent Layer defined) [Concept]
-│       │   └── 10.6.6.2.3 Give the pair a home in one folder (my-scripts/ with brief.md, script, sample input) [Concept]
-│       ├── 10.6.6.3 Folder tree example (essay-submissions, monthly-campaign-rollup) [Concept]
-│       ├── 10.6.6.4 Rerunning by surface: re-upload on Claude.ai; one sentence in a local tool [Concept]
-│       ├── 10.6.6.5 Chat is where scripts are born; your machine is where they live [Concept]
-│       ├── 10.6.6.6 With vs without the habit (table: re-explain monthly vs run the script; rule drift vs frozen rules; helps only you vs hand over the folder) [Concept]
-│       ├── 10.6.6.7 Non-software example: clinic manager's no-show script reused by a new branch manager [Concept]
-│       └── 10.6.6.8 Do this now (1 min): total a study log and save the script with a plain-English note [Concept]
-├── 10.7 Part 3: One problem, five surfaces
-│   ├── 10.7.1 Five surfaces and three kinds of place [Concept]
-│   │   ├── 10.7.1.1 Browser sandbox: Claude.ai, ChatGPT, Gemini [Concept]
-│   │   ├── 10.7.1.2 Terminal in your own folder: Claude Code, OpenCode [Concept]
-│   │   └── 10.7.1.3 Desktop app: Cowork, OpenWork [Concept]
-│   ├── 10.7.2 The running job (callout): twelve monthly expense CSVs; merge, total by category, flag duplicates, one-page HTML report with chart [Concept]
-│   ├── 10.7.3 CSV and Excel files work the same way [Concept]
-│   ├── 10.7.4 9. Claude.ai: the home surface (and ChatGPT, Gemini)
-│   │   ├── 10.7.4.1 Code runs in a sandbox on Anthropic's side; uploads in, results out; nothing on your computer touched [Concept]
-│   │   ├── 10.7.4.2 The running job as a prompt (merge, confirm 12 months, totals, flag duplicates without deleting, HTML report; Rules on commas and refunds) [Concept]
-│   │   ├── 10.7.4.3 Run the Concept 6 checks on the result [Concept]
-│   │   ├── 10.7.4.4 Figure: code running inside Claude.ai [Concept]
-│   │   ├── 10.7.4.5 Strengths and limits (table) [Concept]
-│   │   │   ├── 10.7.4.5.1 Zero installation and risk; sandbox sees only uploads [Concept]
-│   │   │   ├── 10.7.4.5.2 Perfect for one-off jobs; sandbox temporary, download scripts [Concept]
-│   │   │   └── 10.7.4.5.3 Full brief, code, verify, iterate loop visible; recurring jobs mean re-uploading [Concept]
-│   │   ├── 10.7.4.6 Boundary: the chat sandbox is a workshop you visit, not where your files live [Concept]
-│   │   └── 10.7.4.7 Do this now (2 min): screen-time data into a designed one-page HTML report [Concept]
-│   ├── 10.7.5 10. Claude Code & OpenCode: the agent in your folder
-│   │   ├── 10.7.5.1 Claude Code (Anthropic) and OpenCode (open source, many models); both live in the terminal [Concept]
-│   │   ├── 10.7.5.2 The terminal is a chat box that sits inside a folder (true only after installing a tool; agent defined) [Concept]
-│   │   ├── 10.7.5.3 Both have grown beyond the terminal (editors, desktop app, browser) [Concept]
-│   │   ├── 10.7.5.4 The running job: no attachments; agent finds the 12 files, hits the comma problem, fixes it, saves a reusable monthly-report script [Concept]
-│   │   ├── 10.7.5.5 Figure: Claude Code working inside a folder [Concept]
-│   │   ├── 10.7.5.6 Most demanding jobs: code on your machine, on a schedule, touching systems a browser cannot reach (network engineer example) [Concept]
-│   │   ├── 10.7.5.7 Which one: same experience; Claude Code polished and runs Claude; OpenCode lets you pick your model; Agentic Coding Crash Course covers install [Concept]
-│   │   └── 10.7.5.8 Non-programmers belong here too (callout) [Concept]
-│   └── 10.7.6 11. Cowork & OpenWork: delegation with a safety ritual
-│       ├── 10.7.6.1 Claude Cowork (Anthropic) and OpenWork (open source, Different AI); desktop apps with file-touching power; often writing and running code underneath [Concept]
-│       ├── 10.7.6.2 Plan-then-approve: the app writes a plan and waits; plain-English replay moved before the work [Concept]
-│       ├── 10.7.6.3 Figure: five surfaces, one graduation path [Concept]
-│       ├── 10.7.6.4 Choosing among the five (table) [Concept]
-│       │   ├── 10.7.6.4.1 One-off question about a file: Claude.ai [Concept]
-│       │   ├── 10.7.6.4.2 Learning or a borrowed computer: Claude.ai [Concept]
-│       │   ├── 10.7.6.4.3 Problem lives in your folders and repeats: Claude Code or OpenCode [Concept]
-│       │   ├── 10.7.6.4.4 Want an app and a plan to approve: Cowork or OpenWork [Concept]
-│       │   └── 10.7.6.4.5 Scheduled or system-touching task: Claude Code or OpenCode [Concept]
-│       ├── 10.7.6.5 Stay on Claude.ai until uploading becomes the annoying part of your week [Concept]
-│       └── 10.7.6.6 No "do this now" for Concepts 10 and 11 (callout): needs install; you already practiced the skills [Concept]
-├── 10.8 Part 4: Power, safely held
-│   ├── 10.8.1 12. Blast radius: the rules for code that touches your files
-│   │   ├── 10.8.1.1 On Claude.ai mistakes are free; on your machine Concept 2's warning is real [Concept]
-│   │   ├── 10.8.1.2 Deleted files often skip the recycle bin; edited files keep no undo history [Concept]
-│   │   ├── 10.8.1.3 Blast radius defined [Concept]
-│   │   ├── 10.8.1.4 Four rules [Concept]
-│   │   │   ├── 10.8.1.4.1 Rule 1: work on copies until a script has earned trust [Concept]
-│   │   │   ├── 10.8.1.4.2 Rule 2: see changes before they happen (dry run defined) [Concept]
-│   │   │   ├── 10.8.1.4.3 Rule 3: point the agent at the smallest folder (never home directory, Documents, or whole disk) [Concept]
-│   │   │   └── 10.8.1.4.4 Rule 4: write output to new files, never over the originals [Concept]
-│   │   ├── 10.8.1.5 Figure: blast radius, four rules [Concept]
-│   │   ├── 10.8.1.6 Three sentences per brief and about ninety seconds per run [Concept]
-│   │   ├── 10.8.1.7 Permission ladder: trust goes to specific scripts with a track record [Concept]
-│   │   ├── 10.8.1.8 Non-software example: researcher's interview recordings; 40 proposed deletions, six wrongly grouped [Concept]
-│   │   └── 10.8.1.9 Do this now (2 min): rename report PDFs; demand a plan before any change [Concept]
-│   └── 10.8.2 13. The edge of the map, and what's across it
-│       ├── 10.8.2.1 Across the edge: needs more than one-prompt code [Concept]
-│       │   ├── 10.8.2.1.1 Software other people log into [Concept]
-│       │   ├── 10.8.2.1.2 Always-on automation with real consequences (Digital FTE defined) [Concept]
-│       │   ├── 10.8.2.1.3 High-stakes acts with no undo (prepare by code, send by a human) [Concept]
-│       │   └── 10.8.2.1.4 Judgment wearing a computation costume [Concept]
-│       ├── 10.8.2.2 Inside the territory: reconciliations, rollups, renames, merges, cleans, cross-checks, charts, reports that fire a signal [Concept]
-│       └── 10.8.2.3 Where the book goes from here [Concept]
-│           ├── 10.8.2.3.1 Markdown In, HTML Out and this course: two levers [Concept]
-│           ├── 10.8.2.3.2 How to Think in the AI Era: when to call on an agent [Concept]
-│           ├── 10.8.2.3.3 Problem Solving with General Agents: both onto agent surfaces [Concept]
-│           └── 10.8.2.3.4 Agentic Coding and Cowork & OpenWork: for when uploading annoys you [Concept]
-├── 10.9 A short recap before you try the prompts
-│   ├── 10.9.1 1 The AI writes the code and runs it; ask "can I describe this" [Concept]
-│   ├── 10.9.2 2 Code is exact in both directions; the AI picks the language [Concept]
-│   ├── 10.9.3 3 Four signals mark a code problem [Concept]
-│   ├── 10.9.4 4 Say the words: write and run code, show it ran, row counts first [Concept]
-│   ├── 10.9.5 5 Brief the problem: Goal, Input, Output, Rules, Edge cases [Concept]
-│   ├── 10.9.6 6 Test results against knowledge you already have; known-answer test [Concept]
-│   ├── 10.9.7 7 Errors are dialogue; report a wrong number as a symptom [Concept]
-│   ├── 10.9.8 8 Keep brief, script, and sample in one folder [Concept]
-│   ├── 10.9.9 9 Browser chat is the zero-risk sandbox [Concept]
-│   ├── 10.9.10 10 Claude Code and OpenCode put the agent in your folder [Concept]
-│   ├── 10.9.11 11 Cowork and OpenWork plan before they act [Concept]
-│   ├── 10.9.12 12 Copies first, dry run, smallest folder, output to new files [Concept]
-│   ├── 10.9.13 13 Multi-user software, unattended automation, no-undo actions, judgment calls need the rest of the book [Concept]
-│   └── 10.9.14 Identity: you are the client, not the contractor; skill: you can trust work you cannot see because you tested it [Concept]
-├── 10.10 You have already done it, ten times over
-│   ├── 10.10.1 If you ran the do-this-now boxes you have done six moves: spot code problems, force compute, brief messy data, known-answer test, survive a crash, demand a dry run [Concept]
-│   └── 10.10.2 Now run the same moves on your data [Concept]
-├── 10.11 🚀 Projects
-│   ├── 10.11.1 Ten do-this-now boxes were rehearsals; four projects are real data, real stakes, and a catch [Concept]
-│   ├── 10.11.2 A catch: a true thing the AI's code finds that you did not know and can act on (cancel, dispute, rescue, chase) [Concept]
-│   ├── 10.11.3 Outcome: a sentence you can say to a real person plus a small script you keep [Concept]
-│   ├── 10.11.4 The off-the-shelf-app test (callout): if a company already built an app for it (Splitwise), wrong problem; pick a market of one [Concept]
-│   ├── 10.11.5 Start with Money Detective; each takes under an hour on a free account [Concept]
-│   ├── 10.11.6 Project 1: Money Detective (45 min) [Concept]
-│   │   ├── 10.11.6.1 Hunt backward through your own history for the leak [Concept]
-│   │   ├── 10.11.6.2 Rehearse on a sample student wallet (positive money in, negative money out) (collapsible) [Concept]
-│   │   ├── 10.11.6.3 Brief: be my money detective; find where money goes, recurring charges, same-day double charges, what's left by next pocket money [Concept]
-│   │   ├── 10.11.6.4 Earn your trust first: total money in 23,000; PrimeVideo 796 so far [Concept]
-│   │   ├── 10.11.6.5 Make it explain itself (plain-English replay; you never named a language) [Concept]
-│   │   ├── 10.11.6.6 What the detective catches: forgotten subscription (796), double Foodpanda charge on 8 July, food delivery about 4,050 as the real leak; forecast leans on tutoring income [Concept]
-│   │   ├── 10.11.6.7 Your one sentence to a real person (ends in a verb) [Concept]
-│   │   ├── 10.11.6.8 Keep the tool: save as "my monthly money check" [Concept]
-│   │   ├── 10.11.6.9 Higher stakes than pocket money? Cross-model check [Concept]
-│   │   ├── 10.11.6.10 Optional: package the findings as a saved HTML page (artifact on Claude; .html on ChatGPT); never a link you publish [Concept]
-│   │   ├── 10.11.6.11 See a sample report (collapsible; money-detective.netlify.app embed) [NOT VERIFIED: embedded external page not read] [Concept]
-│   │   └── 10.11.6.12 Done when: reproduces two known numbers; one true actionable thing; a saved script [Concept]
-│   ├── 10.11.7 Project 2: What's My Grade, Really (30-45 min) [Concept]
-│   │   ├── 10.11.7.1 Encode your teacher's exact grading rules (Concept 5 at its purest; Rules is the syllabus) [Concept]
-│   │   ├── 10.11.7.2 Sample scores and rules (drop two lowest homeworks, best 8 of 10 quizzes, midterm, final replaces midterm if higher) [Concept]
-│   │   ├── 10.11.7.3 Brief: work out my real grade following every rule; show subtotals; what do I need on the final for 90 percent [Concept]
-│   │   ├── 10.11.7.4 Earn your trust: homework subtotal 88.75 [Concept]
-│   │   ├── 10.11.7.5 The catch: the real number is rarely the one in your head, with a plan attached [Concept]
-│   │   ├── 10.11.7.6 Keep the tool: a "what do I need on the final" script [Concept]
-│   │   └── 10.11.7.7 Done when: reproduces one hand-checked category; reveals a real grade and the exact score needed [Concept]
-│   ├── 10.11.8 Project 3: The Books Don't Match (45 min) [Concept]
-│   │   ├── 10.11.8.1 Your counted total vs the messy digital record; the bookkeeper's problem in small [Concept]
-│   │   ├── 10.11.8.2 Private rules no app has (pizza memo is not dues; Ali's 1,000 covers two; unknown 500) [Concept]
-│   │   ├── 10.11.8.3 Sample trip collection (eight people, 500 each, expected 4,000; messy JazzCash memos; three rules) [Concept]
-│   │   ├── 10.11.8.4 Brief: reconcile who paid, who owes, what is unaccounted for; list unmatched payments; compare with my counted total [Concept]
-│   │   ├── 10.11.8.5 Earn your trust: expected total should come back as 4,000 [Concept]
-│   │   ├── 10.11.8.6 The catch: books come out 500 short; Usman still owes; one unplaced 500; a sentence for the group chat [Concept]
-│   │   ├── 10.11.8.7 Keep the tool: a reconciliation script [Concept]
-│   │   └── 10.11.8.8 Done when: reconciles against your counted total; yields a specific name to chase or payment to place [Concept]
-│   ├── 10.11.9 Project 4: Photo Gallery Rescue (45 min) [Concept]
-│   │   ├── 10.11.9.1 This project changes data, so it teaches the safety habit [Concept]
-│   │   ├── 10.11.9.2 Find duplicates: the AI never "looks"; perceptual hash fingerprints; report count and space (example 47 duplicates, 18 sets, 2.1 GB) [Concept]
-│   │   ├── 10.11.9.3 Safety gate: keep the largest copy, list deletions, back up first, wait for approval; spare false matches [Concept]
-│   │   ├── 10.11.9.4 Sort what is left by date, newest first, into a copy [Concept]
-│   │   ├── 10.11.9.5 Try it yourself (live) (collapsible; photo-gallery-191f90.netlify.app embed; no AI, nothing uploaded) [NOT VERIFIED: embedded external tool not read] [Concept]
-│   │   └── 10.11.9.6 Done when: real duplicate count and space; at least one false match caught; backup exists; survivors sorted by date [Concept]
-│   ├── 10.11.10 If you get stuck mid-project (collapsible, six items) [Concept]
-│   │   ├── 10.11.10.1 It can't open or read my export: ask what is wrong with the file; re-export as CSV or Excel [Concept]
-│   │   ├── 10.11.10.2 It answered but no code block: say the words again [Concept]
-│   │   ├── 10.11.10.3 The number doesn't match: report as a symptom; a mismatch might be the catch [Concept]
-│   │   ├── 10.11.10.4 The same fix keeps failing: restate and propose two different approaches [Concept]
-│   │   ├── 10.11.10.5 My file has private data: make a cleaned copy first, delete identifying columns, check data policy [Concept]
-│   │   ├── 10.11.10.6 I ran out of free-tier usage: wait for reset or switch model family [Concept]
-│   │   └── 10.11.10.7 Pattern: when stuck, describe the stuckness to the AI [Concept]
-│   └── 10.11.11 Next: Problem Solving with General Agents [Concept]
-├── 10.12 Flashcards Study Aid
-│   └── 10.12.1 Flashcard content [NOT VERIFIED: interactive widget, no text delivered] [Concept]
-└── 10.13 Test Your Understanding
-    ├── 10.13.1 Intro: thirty-two scenarios in other people's spreadsheets, folders, and broken runs; answer from the reasoning [Concept]
-    └── 10.13.2 Scenario content [NOT VERIFIED: gated, page showed "Checking access..."] [Concept]
+```mermaid
+flowchart TD
+    A[Recognize code problems: VPRF] --> B[Force real computation]
+    B --> C[Five-part brief]
+    C --> D[Verify with known answers]
+    D --> E[Debug and save scripts]
+    E --> F[Choose a working surface]
+    F --> G[Limit blast radius]
+    G --> H[Build four real-world projects]
 ```
+
+## 📌 Quick navigation
+
+- [10.1 Getting AI to do the real, tedious work of your job, and trust the result, without writing or reading a single line of code](#101-getting-ai-to-do-the-real-tedious-work-of-your-job-and-trust-the-result-without-writing-or-reading-a-single-line-of-code)
+- [10.2 📚 Teaching Aid](#102--teaching-aid)
+- [10.3 Prove it in two minutes](#103-prove-it-in-two-minutes)
+- [10.4 The four parts, in brief](#104-the-four-parts-in-brief)
+- [10.5 Part 1: The deal](#105-part-1-the-deal)
+- [10.6 Part 2: Commissioning code](#106-part-2-commissioning-code)
+- [10.7 Part 3: One problem, five surfaces](#107-part-3-one-problem-five-surfaces)
+- [10.8 Part 4: Power, safely held](#108-part-4-power-safely-held)
+- [10.9 A short recap before you try the prompts](#109-a-short-recap-before-you-try-the-prompts)
+- [10.10 You have already done it, ten times over](#1010-you-have-already-done-it-ten-times-over)
+- [10.11 🚀 Projects](#1011--projects)
+- [10.12 Flashcards Study Aid](#1012-flashcards-study-aid)
+- [10.13 Test Your Understanding](#1013-test-your-understanding)
+
+## ⚡ Frameworks at a glance
+
+| Framework | Remember | Why it matters |
+|---|---|---|
+| **VPRF** | Volume · Precision · Repetition · Files | Decide when the task calls for code |
+| **Five-part brief** | Goal · Input · Output · Rules · Edge cases | Specify what correct work looks like |
+| **Verification ladder** | Known answer · Reality questions · Plain-English replay · Adversarial pass · Cross-model check | Check outputs without reading syntax |
+| **Blast-radius rules** | Copies · Dry run · Smallest folder · New output files | Protect real files |
+
+> [!TIP]
+> Open each section below to explore the course. Each topic is collapsed by default except the two central learning parts.
+
+## 🌳 Expandable curriculum map
+
+
+<a id="101-getting-ai-to-do-the-real-tedious-work-of-your-job-and-trust-the-result-without-writing-or-reading-a-single-line-of-code"></a>
+<details>
+<summary><strong>10.1 Getting AI to do the real, tedious work of your job, and trust the result, without writing or reading a single line of code</strong></summary>
+
+<ul>
+<li>Bookkeeper story: 23 mismatches in a minute [Concept]</li>
+<li>AI writes, runs, and fixes code; you define the problem and check results [Concept]</li>
+<li>Not reading syntax is freedom; checking results is responsibility [Concept]</li>
+</ul>
+
+</details>
+
+<a id="102--teaching-aid"></a>
+<details>
+<summary><strong>10.2 📚 Teaching Aid</strong></summary>
+
+<ul>
+<li>Full presentation link and slideshow embed [NOT VERIFIED: slide content not readable] [Concept]</li>
+</ul>
+
+</details>
+
+<a id="103-prove-it-in-two-minutes"></a>
+<details>
+<summary><strong>10.3 Prove it in two minutes</strong></summary>
+
+<ul>
+<li>Expense-list demonstration: write and run code to total by category [Concept]</li>
+<li>Hand-check Groceries: 4,250 + 2,890 + 3,120 [Concept]</li>
+<li>Builds on What AI Actually Is, AI Prompting in 2026, Markdown In, HTML Out [Concept]</li>
+<li>What you need: a chat account and your own spreadsheet or folder [Concept]</li>
+<li>Quick glossary: 26 terms (script, sandbox, brief, VPRF, known-answer test, dry run, blast radius, etc.) [Concept]</li>
+<li>Short on time? The 30-minute path [Concept]</li>
+</ul>
+
+</details>
+
+<a id="104-the-four-parts-in-brief"></a>
+<details>
+<summary><strong>10.4 The four parts, in brief</strong></summary>
+
+<ul>
+<li>The deal: recognize code problems [Concept]</li>
+<li>Commissioning code: compute, brief, verify, fix, save [Concept]</li>
+<li>One problem, five surfaces [Concept]</li>
+<li>Power, safely held [Concept]</li>
+</ul>
+
+</details>
+
+<a id="105-part-1-the-deal"></a>
+<details open>
+<summary><strong>10.5 Part 1: The deal</strong></summary>
+
+<details>
+<summary><strong>1. Code is no longer gated by coding</strong></summary>
+
+<ul>
+<li>AI writes working code [Concept]</li>
+<li>AI runs code itself [Concept]</li>
+<li>AI repairs code itself [Concept]</li>
+<li>You are the client, not the developer [Concept]</li>
+<li>From the field: bookkeeper, doctor, marketer, teacher, student, network engineer [Concept]</li>
+<li>Do this now: filter eight students [Concept]</li>
+</ul>
+
+</details>
+
+<details>
+<summary><strong>2. What code actually is (the 60-second version)</strong></summary>
+
+<ul>
+<li>Code is exact instructions [Concept]</li>
+<li>Python: data, files, charts and reports [Concept]</li>
+<li>JavaScript and TypeScript: interactive things you click [Concept]</li>
+<li>Code is exact in both directions: wrong instructions scale too [Concept]</li>
+<li>Do this now: total, average, count [Concept]</li>
+</ul>
+
+</details>
+
+<details>
+<summary><strong>3. The dividing line: which problems are code problems</strong></summary>
+
+<ul>
+<li>Answer problem vs code problem [Concept]</li>
+<li>Volume [Concept]</li>
+<li>Precision [Concept]</li>
+<li>Repetition [Concept]</li>
+<li>Files [Concept]</li>
+<li>VPRF: any signal is enough [Concept]</li>
+<li>Eight-task sorting examples [Concept]</li>
+<li>Do this now: classify tasks and name signal [Concept]</li>
+</ul>
+
+</details>
+
+
+</details>
+
+<a id="106-part-2-commissioning-code"></a>
+<details open>
+<summary><strong>10.6 Part 2: Commissioning code</strong></summary>
+
+<details>
+<summary><strong>4. Make the AI’s hands move: automatic vs. explicit</strong></summary>
+
+<ul>
+<li>Write and run code to answer this [Concept]</li>
+<li>Show me the code you ran [Concept]</li>
+<li>Tell me exact row count, column names and date range [Concept]</li>
+<li>Distinguish computed results from estimates [Concept]</li>
+<li>Do this now: commute log, Bus total 105 [Concept]</li>
+</ul>
+
+</details>
+
+<details>
+<summary><strong>5. Brief the problem, not the program</strong></summary>
+
+<ul>
+<li>Goal [Concept]</li>
+<li>Input [Concept]</li>
+<li>Output [Concept]</li>
+<li>Rules [Concept]</li>
+<li>Edge cases [Concept]</li>
+<li>Five-section Markdown brief template [Concept]</li>
+<li>Teacher example: class-list.csv and submissions.csv [Concept]</li>
+<li>Do this now: messy calories file [Concept]</li>
+</ul>
+
+</details>
+
+<details>
+<summary><strong>6. Verifying work you cannot read</strong></summary>
+
+<ul>
+<li>Known-answer test [Concept]</li>
+<li>Reality questions [Concept]</li>
+<li>Plain-English replay [Concept]</li>
+<li>Adversarial pass [Concept]</li>
+<li>Cross-model check [Concept]</li>
+<li>Verification ladder by stakes [Concept]</li>
+<li>Wrong-but-running: why tests matter [Concept]</li>
+<li>Do this now: 8,000 + 6,500 + 9,000 = 23,500 [Concept]</li>
+</ul>
+
+</details>
+
+<details>
+<summary><strong>7. When it breaks: errors are dialogue, not failure</strong></summary>
+
+<ul>
+<li>Paste full error: diagnose, fix, rerun [Concept]</li>
+<li>Wrong-but-running: report symptom and expected value [Concept]</li>
+<li>After three failed fixes, ask for alternative approaches [Concept]</li>
+<li>Do this now: deliberately misspell Pagse [Concept]</li>
+</ul>
+
+</details>
+
+<details>
+<summary><strong>8. Keep the script: a solved problem becomes a button</strong></summary>
+
+<ul>
+<li>Save the script as a file [Concept]</li>
+<li>Keep the brief next to it: Intent Layer [Concept]</li>
+<li>Keep sample input in one folder [Concept]</li>
+<li>Chat is where scripts are born; your machine is where they live [Concept]</li>
+<li>Do this now: save study-log script [Concept]</li>
+</ul>
+
+</details>
+
+
+</details>
+
+<a id="107-part-3-one-problem-five-surfaces"></a>
+<details>
+<summary><strong>10.7 Part 3: One problem, five surfaces</strong></summary>
+
+<details>
+<summary><strong>9. Claude.ai: the home surface (and ChatGPT, Gemini)</strong></summary>
+
+<ul>
+<li>Browser sandbox: uploads in, results out [Concept]</li>
+<li>Twelve monthly expense CSVs: merge, total, flag duplicates, HTML report [Concept]</li>
+<li>Download scripts; temporary sandbox is not permanent storage [Concept]</li>
+<li>Do this now: screen-time HTML report [Concept]</li>
+</ul>
+
+</details>
+
+<details>
+<summary><strong>10. Claude Code &amp; OpenCode: the agent in your folder</strong></summary>
+
+<ul>
+<li>Terminal-based agent operates in a chosen folder [Concept]</li>
+<li>Agent finds 12 files and saves reusable report script [Concept]</li>
+<li>Claude Code vs OpenCode [Concept]</li>
+<li>Non-programmers belong here too [Concept]</li>
+</ul>
+
+</details>
+
+<details>
+<summary><strong>11. Cowork &amp; OpenWork: delegation with a safety ritual</strong></summary>
+
+<ul>
+<li>Desktop apps with file-touching power [Concept]</li>
+<li>Plan-then-approve [Concept]</li>
+<li>Five-surface selection guide [Concept]</li>
+<li>Stay with browser chat until uploading becomes burdensome [Concept]</li>
+</ul>
+
+</details>
+
+
+</details>
+
+<a id="108-part-4-power-safely-held"></a>
+<details>
+<summary><strong>10.8 Part 4: Power, safely held</strong></summary>
+
+<details>
+<summary><strong>12. Blast radius: the rules for code that touches your files</strong></summary>
+
+<ul>
+<li>Work on copies until a script earns trust [Concept]</li>
+<li>Dry run: see changes before they happen [Concept]</li>
+<li>Point the agent at the smallest folder [Concept]</li>
+<li>Write output to new files, never over originals [Concept]</li>
+<li>Permission ladder and review before destructive actions [Concept]</li>
+<li>Do this now: PDF rename plan before changes [Concept]</li>
+</ul>
+
+</details>
+
+<details>
+<summary><strong>13. The edge of the map, and what’s across it</strong></summary>
+
+<ul>
+<li>Multi-user software needs more than one-prompt code [Concept]</li>
+<li>Always-on automation and Digital FTE [Concept]</li>
+<li>Irreversible actions require human control [Concept]</li>
+<li>Judgment wearing a computation costume [Concept]</li>
+<li>Next: general agents, agentic coding, Cowork &amp; OpenWork [Concept]</li>
+</ul>
+
+</details>
+
+
+</details>
+
+<a id="109-a-short-recap-before-you-try-the-prompts"></a>
+<details>
+<summary><strong>10.9 A short recap before you try the prompts</strong></summary>
+
+<ul>
+<li>13-concept recap: recognize, compute, brief, verify, fix, save, choose surface, protect files [Concept]</li>
+<li>You are the client, not the contractor [Concept]</li>
+</ul>
+
+</details>
+
+<a id="1010-you-have-already-done-it-ten-times-over"></a>
+<details>
+<summary><strong>10.10 You have already done it, ten times over</strong></summary>
+
+<ul>
+<li>Six rehearsed moves: spot, compute, brief, test, recover, dry run [Concept]</li>
+<li>Run the same moves on your data [Concept]</li>
+</ul>
+
+</details>
+
+<a id="1011--projects"></a>
+<details>
+<summary><strong>10.11 🚀 Projects</strong></summary>
+
+<details>
+<summary><strong>Project 1: Money Detective (45 min) [Concept]</strong></summary>
+
+<ul>
+<li>Detect subscriptions, duplicate charges, and spending leaks [Concept]</li>
+<li>Known-answer: money in 23,000; PrimeVideo 796 [Concept]</li>
+<li>Save a reusable monthly money-check script [Concept]</li>
+<li>Sample report [NOT VERIFIED: external embed not read] [Concept]</li>
+</ul>
+
+</details>
+
+<details>
+<summary><strong>Project 2: What’s My Grade, Really (30–45 min) [Concept]</strong></summary>
+
+<ul>
+<li>Encode exact grading rules and dropped scores [Concept]</li>
+<li>Known-answer: homework subtotal 88.75 [Concept]</li>
+<li>Compute score required for 90 percent [Concept]</li>
+</ul>
+
+</details>
+
+<details>
+<summary><strong>Project 3: The Books Don’t Match (45 min) [Concept]</strong></summary>
+
+<ul>
+<li>Reconcile eight people × 500 = 4,000 [Concept]</li>
+<li>Find unmatched payments and missing dues [Concept]</li>
+<li>Known catch: 500 short, unplaced 500, Usman owes [Concept]</li>
+</ul>
+
+</details>
+
+<details>
+<summary><strong>Project 4: Photo Gallery Rescue (45 min) [Concept]</strong></summary>
+
+<ul>
+<li>Identify duplicate candidates by perceptual hash [Concept]</li>
+<li>Backup, preview, approve, avoid false matches [Concept]</li>
+<li>Sort survivors by date into a copy [Concept]</li>
+<li>Live demo [NOT VERIFIED: external embed not read] [Concept]</li>
+</ul>
+
+</details>
+
+<details>
+<summary><strong>If you get stuck mid-project [Concept]</strong></summary>
+
+<ul>
+<li>File cannot open: re-export as CSV or Excel [Concept]</li>
+<li>No code executed: explicitly request code execution [Concept]</li>
+<li>Wrong number: provide expected value [Concept]</li>
+<li>Private data: clean copy and check policy [Concept]</li>
+<li>Free-tier usage exhausted: wait or switch model [Concept]</li>
+</ul>
+
+</details>
+
+
+</details>
+
+<a id="1012-flashcards-study-aid"></a>
+<details>
+<summary><strong>10.12 Flashcards Study Aid</strong></summary>
+
+<ul>
+<li>Flashcard content [NOT VERIFIED: interactive widget, no text delivered] [Concept]</li>
+</ul>
+
+</details>
+
+<a id="1013-test-your-understanding"></a>
+<details>
+<summary><strong>10.13 Test Your Understanding</strong></summary>
+
+<ul>
+<li>32 scenario-based questions [Concept]</li>
+<li>Scenario content [NOT VERIFIED: gated, page showed “Checking access...”] [Concept]</li>
+</ul>
+
+</details>
+
+## 🧪 Copyable five-part code brief
+
+```markdown
+# Goal
+What result should the script produce?
+
+# Input
+What files, columns, and formats will it read?
+
+# Output
+What exactly should it save or show?
+
+# Rules
+What business rules must be followed?
+
+# Edge cases
+What should happen with blanks, duplicates, mismatches, or unreadable data?
+```
+
+## ✅ Revision checklist
+
+- [ ] I can distinguish an answer problem from a code problem using VPRF.
+- [ ] I can request **executed computation**, not a plausible estimate.
+- [ ] I can write a five-part brief without programming jargon.
+- [ ] I can independently check at least one known answer.
+- [ ] I can debug errors and detect wrong-but-running scripts.
+- [ ] I can save a brief, script, and sample input together.
+- [ ] I can select between browser, terminal, and desktop-agent workflows.
+- [ ] I can protect files using copies, dry runs, narrow folders, and new outputs.
+- [ ] I can explain the goals and safety gates of all four projects.
+
+---
+
+**Source:** [Panaversity Agent Factory — Code You Never Write](https://agentfactory.panaversity.org/docs/code-you-never-write-crash-course) · Source topic tree supplied by user, 15 October 2026.
